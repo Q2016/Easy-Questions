@@ -7,22 +7,10 @@ Input: nums = [1,2,3,1], k = 3
 Output: true
 
 Solution:
-class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        
-        slow,fast=0,1
-        
-        while slow<len(nums):
-            
-            while fast<len(nums):
-                
-                if nums[slow]==nums[fast] and (fast-slow)<=k:
-                    return True
-                else:
-                    fast+=1
-            slow+=1
-            
-        return False
-    
-    
-    # there is a one loop solution using dictionary
+def containsNearbyDuplicate(self, nums, k):
+    dic = {}
+    for i, v in enumerate(nums):
+        if v in dic and i - dic[v] <= k:
+            return True
+        dic[v] = i
+    return False
