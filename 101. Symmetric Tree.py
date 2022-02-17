@@ -26,7 +26,8 @@ class Solution:
     else:
       return False
     
-TC: O(b) SC: O(log n)    
+Time: O(b) 
+Space: O(log n)    
     
 The essence of recursively is Stack, so we can use our own stack to rewrite it into iteratively:
 
