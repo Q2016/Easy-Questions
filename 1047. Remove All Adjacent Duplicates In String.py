@@ -11,7 +11,7 @@ For example, in "abbaca" we could remove "bb" since the letters are adjacent and
 The result of this move is that the string is "aaca", of which only "aa" is possible, so the final string is "ca".
 
 
-Solution:
+Solution: Stack
 If current char is same as previous char in the ArrayDeque, pop out the previous char;
 Otherwise, add current char into the ArrayDeque.
 
@@ -23,6 +23,7 @@ Otherwise, add current char into the ArrayDeque.
             else:
                 dq.append(c)
         return ''.join(dq)
+
 Or just use list:
 
     def removeDuplicates(self, S: str) -> str:
