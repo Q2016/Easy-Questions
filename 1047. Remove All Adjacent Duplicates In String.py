@@ -10,6 +10,7 @@ Explanation:
 For example, in "abbaca" we could remove "bb" since the letters are adjacent and equal, and this is the only possible move.  
 The result of this move is that the string is "aaca", of which only "aa" is possible, so the final string is "ca".
 
+
 Solution:
 If current char is same as previous char in the ArrayDeque, pop out the previous char;
 Otherwise, add current char into the ArrayDeque.
