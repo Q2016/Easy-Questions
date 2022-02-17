@@ -8,7 +8,7 @@ Output: 58
 Explanation: We can use 34 and 24 to sum 58 which is less than 60.
 
 
-Solution:
+Solution: Two pointers
 Sorted and then use two pointers technique.
 
 class Solution:
