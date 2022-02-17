@@ -14,7 +14,7 @@ Similar to my solution of 791. Custom Sort String
         ans, cnt = [], collections.Counter(arr1)         # Count each number in arr1
         for i in arr2:
             if cnt[i]: ans.extend([i] * cnt.pop(i))      # Sort the common numbers in both arrays by the order of arr2. 
-        for i in range(1001):               
+        for i in range(1001):                #|> arrays in arr2 are removed by pop in the line above           
             if cnt[i]: ans.extend([i] * cnt.pop(i))      # Sort the numbers only in arr1.
         return ans
 Analysis:
