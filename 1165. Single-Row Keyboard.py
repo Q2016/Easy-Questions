@@ -11,7 +11,7 @@ Explanation: The index moves from 0 to 2 to write 'c' then to 1 to write 'b' the
 Total time = 2 + 1 + 1 = 4. 
 
 
-Solution:
+Solution: Dictionary+One pass
   
 class Solution:
     def calculateTime(self, keyboard: str, word: str) -> int:
