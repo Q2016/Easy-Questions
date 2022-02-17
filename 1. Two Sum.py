@@ -8,7 +8,7 @@ Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-Solution:
+Solution: Hashmap
 # https://www.youtube.com/watch?v=KLlXCFG5TnA
 # you can't solve it using two pointer or slidding window
 # my own solution with the hint of hashmap
