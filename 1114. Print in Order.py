@@ -18,7 +18,7 @@ Explanation: There are three threads being fired asynchronously. The input [1,2,
 and thread C calls third(). "firstsecondthird" is the correct output.
 
 
-Solution:
+Solution: Lock (The most intuitive)
 Raise two barriers. Both wait for two threads to reach them.
 
 First thread can print before reaching the first barrier. Second thread can print before reaching the second barrier. Third thread can print 
