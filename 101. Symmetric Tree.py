@@ -2,10 +2,9 @@ Question:
 Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 
 
-Solution:
+Solution: Recursive
 Basically, this question is recursively. Or we can say, the tree structure is recursively, so the recursively solution maybe easy to write:
 
-TC: O(b) SC: O(log n)
 
 class Solution:
   def isSymmetric(self, root):
@@ -26,6 +25,9 @@ class Solution:
       return outPair and inPiar
     else:
       return False
+    
+TC: O(b) SC: O(log n)    
+    
 The essence of recursively is Stack, so we can use our own stack to rewrite it into iteratively:
 
  class Solution2:
