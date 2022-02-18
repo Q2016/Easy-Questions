@@ -8,7 +8,8 @@ Input: s = "A man, a plan, a canal: Panama"
 Output: true
 Explanation: "amanaplanacanalpanama" is a palindrome.
 
-Solution:
+    
+Solution: Two Pointers
 def isPalindrome(self, s):
     l, r = 0, len(s)-1
     while l < r:
