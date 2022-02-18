@@ -12,12 +12,15 @@ Total profit is 4 + 3 = 7.
 
 Solution: Botoom-up DP + iteration:
 # https://www.youtube.com/watch?v=3SJ3pUkPQMc
+For the figure
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization
+	
                                     sell
-                           <---------------------  
-                          |                     |
-keep in Not hold<----> Not hold               Hold <---> keep in Hold
-                          |                     |
-                          ---------------------->
+             ________      <---------------------    ____
+            |       |      |                     |  |    |
+keep in Not hold     Not hold                    Hold  keep in Hold
+            |_______|      |                     |  |____|
+                           ---------------------->
                                      Buy
                                      
 class Solution:
