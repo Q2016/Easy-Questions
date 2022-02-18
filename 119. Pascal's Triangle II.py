@@ -7,7 +7,7 @@ Input: rowIndex = 3
 Output: [1,3,3,1]
 
 
-Solution:
+Solution: (didnt understand it)
 class Solution(object):
     def getRow(self, rowIndex):
 
