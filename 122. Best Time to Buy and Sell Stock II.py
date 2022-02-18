@@ -10,7 +10,7 @@ Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-
 Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 Total profit is 4 + 3 = 7.
 
-Solution: Botoom-up DP + iteration:
+Solution: Iteration
 # https://www.youtube.com/watch?v=3SJ3pUkPQMc
 For the figure
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization
