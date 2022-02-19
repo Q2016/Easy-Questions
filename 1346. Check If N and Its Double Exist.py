@@ -11,23 +11,7 @@ Output: true
 Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
 
 Solution:
-Q & A:
-Q: Can you please explain this line ?
 
-if (seen.contains(2 * i) || i % 2 == 0 && seen.contains(i / 2))
-A: i is half or 2 times of a number in seen.
-
-end of Q & A
-
-    public boolean checkIfExist(int[] arr) {
-        Set<Integer> seen = new HashSet<>();   
-        for (int i : arr) {
-            if (seen.contains(2 * i) || i % 2 == 0 && seen.contains(i / 2))
-                return true;
-            seen.add(i);
-        }
-        return false;
-    }
     def checkIfExist(self, arr: List[int]) -> bool:
         seen = set()
         for i in arr:
