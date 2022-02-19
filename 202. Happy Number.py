@@ -8,10 +8,11 @@ Example 1:
 Input: n = 19
 Output: true
 Explanation:
-12 + 92 = 82
-82 + 22 = 68
-62 + 82 = 100
-12 + 02 + 02 = 1
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
+
 
 Solution:
 class Solution:
@@ -19,17 +20,13 @@ class Solution:
         
         def squar(n):
             string=str(n)
-            
             tmp=0
             for c in string:
                 i=int(c)
                 tmp=tmp+i**2
-                
             return tmp
-
         m=0
         while n!=1 and m<100:
             m+=1
-            n=squar(n)
-        
+            n=squar(n)     
         return True if n==1 else False
