@@ -7,7 +7,7 @@ Input: nums = [1,2,3,4]
 Output: [1,3,6,10]
 Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 
-Solution:
+Solution: One pass
 Time complexity for both the solutions: O(n).
 Space complexity in both the solutions: O(n) because we are creating a result list of size n.
 
