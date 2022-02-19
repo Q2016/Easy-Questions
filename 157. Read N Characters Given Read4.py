@@ -34,6 +34,6 @@ def read(buf, n):
             break
 
         count = min(count, n - index)
-        buf[index:] = buf4[:count]
+        buf[index:] = buf4[:count]  # text='abcdefg'  text[:4]='abcd', text[1:]='bcdefg'
         index += count
     return index
