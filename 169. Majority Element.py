@@ -2,36 +2,37 @@ Question:
 Given an array nums of size n, return the majority element.
 The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
- 
 Example 1:
 Input: nums = [3,2,3]
 Output: 3
 
-Solution:
-//Recursively find the majority in the two halves of nums and combine the results. The base case is that the majority element of a single-element array is just that element.
+ 
+ 
+Solution: Boyer-Moore Majority Vote
+We will be using Boyer-Moore Majority Vote, which will find the majority vote (element found over n/2 times) for us. We must keep a count 
+variable and a majority variable which keeps track of the current majority. The idea is to increment the count when we encounter the majority 
+and decrement the count when a different value is encountered. This means that if we reach a count value of 0, then no previous number has been 
+the majority in the subarray that we have looked at. So, we can set the current element as the majority and continue with our algorithm. At the 
+end of the array we will have found an element that is equal to the majority because it exists more times than the rest of the elements combined. 
+The question states that we are guarenteed to have a majority, but if we didn't we would have to run through the list another time to make sure it 
+is the majority.
 
-class Solution {
-public:
-    int majorityElement(vector<int>& nums) {
-        return majority(nums, 0, nums.size() - 1);
-    }
-private:
-    
-    int majority(vector<int>& nums, int l, int r) {
-        
-        if (l == r) {
-            return nums[l];
-        }
-        
-        int m,lm,rm;
-        
-        m = l + (r - l) / 2; 
-        lm = majority(nums, l, m); 
-        rm = majority(nums, m + 1, r);
 
-        if (lm == rm) {
-            return lm;
-        }
-return count(nums.begin() + l, nums.begin() + r + 1, lm) > count(nums.begin() + l, nums.begin() + r + 1, rm) ? lm : rm;
-    }
-}; 
+from collections import defaultdict
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        count = 0
+        majority = 0
+        for num in nums:
+            if count == 0:
+                majority = num
+                count += 1
+            elif num == majority:
+                count += 1
+            else:
+                count -= 1
+        return majority
+
+Complexity
+Time is O(n)
+Space is O(1)       
