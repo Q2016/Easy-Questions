@@ -11,7 +11,8 @@ Output: 4
 Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 Total amount you can rob = 1 + 3 = 4.
 
-Solution:
+
+Solution: DP
 # https://www.youtube.com/watch?v=73r3KWiEvyk
 
 #f(0) = nums[0]
