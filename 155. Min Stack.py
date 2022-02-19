@@ -15,42 +15,39 @@ Input
 Output
 [null,null,null,null,-3,null,0,-2]
 
-Solution:
-# https://codereview.stackexchange.com/questions/167534/python-implementation-of-stack-to-return-minimum-in-o1-time
-
-
+Solution: 
+Time: O(1)    
+We need to keep the roling min with q. When pop happens, current min will automatically be adjusted.
+    
 class MinStack:
 
-    def __init__(self):
-        self.element_stack = []
-        self.min_element_stack = []
-    
-    
-    def push(self, item: int) -> None:
-        if self.size() == 0:
-            self.min_element_stack.append(item)
-        else:
-            self.min_element_stack.append(min(self.min_element_stack[self.size() - 1], item))
-        self.element_stack.append(item)
-        
+def __init__(self):
+    self.q = []
 
-    def pop(self) -> None:
-        if self.is_empty():
-            raise ValueError('Empty stack')
-        self.min_element_stack.pop()
-        return self.element_stack.pop()
-        
+# @param x, an integer
+# @return an integer
+def push(self, x):
+    curMin = self.getMin()
+    if curMin == None or x < curMin:
+        curMin = x
+    self.q.append((x, curMin));
 
-    def top(self) -> int:
-        return self.element_stack[-1]
+# @return nothing
+def pop(self):
+    self.q.pop()
 
-    def getMin(self) -> int:
-        if self.is_empty():
-            raise ValueError('Empty stack')
-        return self.min_element_stack[self.size() - 1]
 
-    def is_empty(self):
-        return self.size() == 0
+# @return an integer
+def top(self):
+    if len(self.q) == 0:
+        return None
+    else:
+        return self.q[-1][0]
 
-    def size(self):
-        return len(self.element_stack)
+
+# @return an integer
+def getMin(self):
+    if len(self.q) == 0:
+        return None
+    else:
+        return self.q[-1][1]
