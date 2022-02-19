@@ -21,11 +21,17 @@ Time: O(bits of num)
 Space: O(bits of num)
 However num is bounded in 0 <= num <= 10^6, so time and space are both O(1) in this problem.
 
-class Solution:
-    def numberOfSteps (self, num: int) -> int:
-        digits = f'{num:b}'
-        return digits.count('1') - 1 + len(digits)
-O(1)space:
+    def numberOfSteps (self, n: int) -> int:
+        count = 0;
+        while (n > 0) :
+            if (n % 2 == 0): 
+                n /= 2
+            else :
+                n -= 1
+            ++count
+        return count        
+
+or:
 
 class Solution:
     def numberOfSteps (self, num: int) -> int:
