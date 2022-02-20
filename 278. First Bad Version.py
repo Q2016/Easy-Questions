@@ -6,7 +6,7 @@ You are given an API bool isBadVersion(version) which returns whether version is
 You should minimize the number of calls to the API.
 
 Example 1:
-Input: n = 5, bad = 4
+Given n = 5, and version = 4 is the first bad version.
 Output: 4
 Explanation:
 call isBadVersion(3) -> false
@@ -28,3 +28,17 @@ class Solution:
             else:
                 left = mid + 1
         return left
+
+    
+https://leetcode.com/problems/first-bad-version/discuss/769685/Python-Clear-explanation-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems. 
+    
+69. Sqrt(x) [Easy]
+35. Search Insert Position [Easy]
+1011. Capacity To Ship Packages Within D Days [Medium]
+410. Split Array Largest Sum [Hard]
+875. Koko Eating Bananas [Medium]
+1482. Minimum Number of Days to Make m Bouquets [Medium]
+668. Kth Smallest Number in Multiplication Table [Hard]
+719. Find K-th Smallest Pair Distance [Hard]
+1201. Ugly Number III [Medium]
+1283. Find the Smallest Divisor Given a Threshold [Medium]
