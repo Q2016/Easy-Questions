@@ -6,7 +6,9 @@ Example 1:
 Input: s = "anagram", t = "nagaram"
 Output: true  
   
-Solution:
+  
+Solution: Dictionary
+  
 def isAnagram1(self, s, t):
     dic1, dic2 = {}, {}
     for item in s:
