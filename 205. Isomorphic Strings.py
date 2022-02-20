@@ -7,7 +7,8 @@ Example 1:
 Input: s = "egg", t = "add"
 Output: true
 
-Solution:
+Solution: Hashing
+    
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         
