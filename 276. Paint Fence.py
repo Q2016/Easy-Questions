@@ -20,7 +20,7 @@ Explanation: Take c1 as color 1, c2 as color 2. All possible ways are:
 
 
 
-Solution:
+Solution: DP
 
 class Solution:
   def numWays(self, n: int, k: int) -> int:
