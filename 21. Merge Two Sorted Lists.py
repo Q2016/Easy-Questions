@@ -1,9 +1,22 @@
 Question:
-You are given the heads of two sorted linked lists list1 and list2.
-Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
-Return the head of the merged linked list.
+You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a one sorted list. The list should be made by 
+splicing together the nodes of the first two lists. Return the head of the merged linked list.
+
 
 Solution:
+    
+# recursively    
+def mergeTwoLists2(self, l1, l2):
+    if not l1 or not l2:
+        return l1 or l2
+    if l1.val < l2.val:
+        l1.next = self.mergeTwoLists(l1.next, l2)
+        return l1
+    else:
+        l2.next = self.mergeTwoLists(l1, l2.next)
+        return l2    
+    
+
 # iteratively
 def mergeTwoLists1(self, l1, l2):
     dummy = cur = ListNode(0)
@@ -17,18 +30,8 @@ def mergeTwoLists1(self, l1, l2):
         cur = cur.next
     cur.next = l1 or l2
     return dummy.next
+ 
     
-# recursively    
-def mergeTwoLists2(self, l1, l2):
-    if not l1 or not l2:
-        return l1 or l2
-    if l1.val < l2.val:
-        l1.next = self.mergeTwoLists(l1.next, l2)
-        return l1
-    else:
-        l2.next = self.mergeTwoLists(l1, l2.next)
-        return l2
-        
 # in-place, iteratively        
 def mergeTwoLists(self, l1, l2):
     if None in (l1, l2):
