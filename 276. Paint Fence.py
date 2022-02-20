@@ -21,18 +21,23 @@ Explanation: Take c1 as color 1, c2 as color 2. All possible ways are:
 
 
 Solution:
-This question can be solved by Dynamic Programming implicitly. I did not figure out the solution until I found a great video 
-from youtube. And the explaination is very clear. I am going to share here.
 
-def numWays(self, n: int, k: int) -> int:
-        if n == 0:
-            return 0
-        if n == 1:
-            return k
-        same, dif = k, k*(k-1)
-        for i in range(3, n+1):
-            same, dif = dif, (same+dif)*(k-1)
-        return same + dif
+class Solution:
+  def numWays(self, n: int, k: int) -> int:
+    if n == 0:
+      return 0
+    if n == 1:
+      return k
+    if n == 2:
+      return k * k
 
+    # dp[i] := # of ways to pan posts with k colors
+    dp = [0] * (n + 1)
+    dp[0] = 0
+    dp[1] = k
+    dp[2] = k * k
 
-The total cost is will be O(n-2)
+    for i in range(3, n + 1):
+      dp[i] = (dp[i - 1] + dp[i - 2]) * (k - 1)
+
+    return dp[n]
