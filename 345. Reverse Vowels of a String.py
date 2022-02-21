@@ -6,8 +6,8 @@ Example 1:
 Input: s = "hello"
 Output: "holle"
 
-Solution:
-class Solution:
+Solution: Two passes
+
     def reverseVowels(self, s: str) -> str:
         
         s=list(s)
