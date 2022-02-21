@@ -6,7 +6,7 @@ you may return the result in any order.
 Solution:
 
 The naive approach would be to iterate along the first array nums1 and to check for each value if this value in nums2 or not. 
-If yes - add the value to output. Such an approach would result in a pretty bad \mathcal{O}(n \times m)O(n×m) time complexity, 
+If yes - add the value to output. Such an approach would result in a pretty bad O(n×m) time complexity, 
 where n and m are arrays' lengths.
 
 class Solution:
