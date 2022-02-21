@@ -11,7 +11,7 @@ m.next(5) = (10 + 3 + 5) / 3
 
 
 
-Solution:
+Solution: Deque
 The question is to show basic concept of queue which is FIFO.
 
 
