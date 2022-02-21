@@ -8,6 +8,7 @@ Output: 7
 Explanation:
 One longest palindrome that can be built is "dccaccd", whose length is 7.
 
+
 Solution: Greedy
 A palindrome consists of letters with equal partners, plus possibly a unique center (without a partner). The letter i from the left 
 has its partner i from the right. For example in 'abcba', 'aa' and 'bb' are partners, and 'c' is a unique center.
@@ -22,7 +23,7 @@ class Solution:
     def longestPalindrome(self, s):
         ans = 0
         for v in collections.Counter(s).itervalues():
-            ans += v / 2 * 2
+            ans += v // 2 * 2
             if ans % 2 == 0 and v % 2 == 1:
                 ans += 1
         return ans  
