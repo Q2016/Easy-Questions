@@ -7,45 +7,26 @@ Example 1:
 Input: s = "abc", t = "ahbgdc"
 Output: true
 
-Solution:
-class Solution:
-    def isSubsequence(self, s: str, t: str) -> bool:
-        i=0
-        j=0
-        k=0
+    
+Solution: Dynamic programming
+The first solution I think when I see this problem is dynamic programming. Let dp[i][j] = 1 if s[:j] is substring of t[:i]. How can we find it:
 
-        if s=="":
-            return True
-        
-        if len(s)==1 and s in t:
-            return True
-        
-        while i <= j and j< len(t):
-            if t[i]==s[k]:
-                j=i
-                j+=1
+If s[j] == t[i], then we need to search string s[:j-1] in t[:i-1]
+If s[j] != t[i], then we need to search string s[:j] in t[:i-1]
+Here we use also s = "!" + s trick which allows as to handle border cases with empty strings.
+
+Complexity: time and space complexity is O(nm), because we need to iterate over all table once.
+
+    def isSubsequence(self, s, t):
+        s, t = "!" + s, "!" + t
+        m, n = len(s), len(t)
+        dp = [[0] * m for _ in range(n)] 
+        for i in range(n): dp[i][0] = 1
+   
+        for i,j in product(range(1, n), range(1, m)):
+            if s[j] == t[i]:
+                dp[i][j] = dp[i-1][j-1]
             else:
-                i+=1
-                j=i
-                continue
-
-            k+=1
-            if k==len(s):
-                return False
-
-            while j< len(t):
-                if t[j]==s[k]:
-                    i=j
-
-                    if k==len(s)-1:
-                        return True
-                    break
-                else:
-                    j+=1
-
-        if k==len(s):
-            return True
-        else:
-            return False
-                        
+                dp[i][j] = dp[i-1][j]
                     
+        return dp[-1][-1]
