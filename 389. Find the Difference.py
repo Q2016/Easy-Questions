@@ -7,31 +7,22 @@ Input: s = "abcd", t = "abcde"
 Output: "e"
 Explanation: 'e' is the letter that was added.
 
-Solution:
-In this problem we are given 2 strings "t" & "s". example:
-s = "abc"
-t = "bacx" in "t" we have one additional character
+    
+Solution: BITWISE
 
-So, we have to find one additional character there are couple of ways to solve this problem.But we will use BITWISE method to solve this problem
-
+Let's use BITWISE method to solve this problem
 So, using XOR concept we will get our additional character, understand it visually :-
-
-image
-
-So, here also let's say our character are:
+Here also let's say our character are:
 s = abc
 t = cabx
-
-if we take XOR of every character. all the n character of s "abc" is similar to n character of t "cab". So, they will cancel each other. 
+If we take XOR of every character. all the n character of s "abc" is similar to n character of t "cab". So, they will cancel each other. 
 And we left with our answer.
-
 s =   abc
 t =   cbax
 ------------
 ans -> x
 -----------
 
-class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         c = 0
         for cs in s: c ^= ord(cs) #ord is ASCII value
