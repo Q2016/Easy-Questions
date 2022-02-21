@@ -15,7 +15,6 @@ to check if a character is unique or not. If the character is unique, one could 
     def firstUniqChar(self, s: str) -> int:
         # build hash map : character and how often it appears
         count = collections.Counter(s)
-        
         # find the index
         for idx, ch in enumerate(s):
             if count[ch] == 1:
