@@ -8,32 +8,27 @@ Output: 2
 
 
 Solution:
-Code for This Problem:
-var searchInsert = function(nums, target) {
-    let lo = 0, hi = nums.length; // we might need to inseart at the end
-    while(lo < hi) { // breaks if lo == hi
-        let mid = lo + Math.floor((hi-lo)/2); // always gives the lower mid
-        if (target > nums[mid]) {
-            lo = mid + 1 // no way mid is a valid option
-        } else {
-            hi = mid // it might be possibe to inseart @ mid
-        }
-    }
+
+def searchInsert (nums, target):
+    let lo = 0, hi = len(nums) # we might need to inseart at the end
+    while(lo < hi): # breaks if lo == hi
+        let mid = lo + floor((hi-lo)/2) # always gives the lower mid
+        if (target > nums[mid]):
+            lo = mid + 1 # no way mid is a valid option
+        else:
+            hi = mid # it might be possibe to inseart @ mid
     return lo;
-};
+
+
 Before We Begin
 Have you ever wondered when to use while(lo<hi) while(lo <= hi) ?
-Have you ever wondered when to use left = mid + 1 left = mid right = mid + 1 right = mid ?
+Have you ever wondered when to use left = mid + 1 or left = mid, right = mid + 1 or right = mid ?
 Have you ever wondered why your binary search algorithm stuck in an infinity loop?
 Well, at least I did all that, and if you are like me this article is for you.
 
-*I'm not writing this article to have people "remember" the code, instead, I want use this article to introduce people a gateway of solving 
-binary search problems.
-*Some of the content are sourced from here(Chinese). Much thanks to the original author.
 
 The Idea
-Set lo and hi boundary, compute mid index
-Compare target with mid , adjust lo & hi accordingly
+Set lo and hi boundary, compute mid index. Compare target with mid , adjust lo & hi accordingly
 
 
 Time Complexity
