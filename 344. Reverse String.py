@@ -6,17 +6,9 @@ Example 1:
 Input: s = ["h","e","l","l","o"]
 Output: ["o","l","l","e","h"]
 
-Solution:
-
-class Solution(object):
-    def reverseString(self, s):
-        l = len(s)
-        if l < 2:
-            return s
-        return self.reverseString(s[l/2:]) + self.reverseString(s[:l/2])
+Solution: Two pointer
 
 
-class SolutionClassic(object):
     def reverseString(self, s):
         r = list(s)
         i, j  = 0, len(r) - 1
@@ -27,6 +19,17 @@ class SolutionClassic(object):
 
         return "".join(r)
 
-class SolutionPythonic(object):
+
     def reverseString(self, s):
         return s[::-1]
+    
+    
+    
+    def reverseString(self, s):
+        l = len(s)
+        if l < 2:
+            return s
+        return self.reverseString(s[l/2:]) + self.reverseString(s[:l/2])
+
+
+
