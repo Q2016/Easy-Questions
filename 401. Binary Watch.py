@@ -9,48 +9,8 @@ Example 1:
 Input: turnedOn = 1
 Output: ["0:01","0:02","0:04","0:08","0:16","0:32","1:00","2:00","4:00","8:00"]
 
+ 
 Solution:
-class Solution:
-    def readBinaryWatch(self, turnedOn: int) -> List[str]:
-        
-        binary=["8h","4h","2h","1h","32m","16m","8m","4m","2m","1m"]
-        
-        # function to generate all the sub lists
-        def sub_lists (l):
-            lists = [[]]
-            for i in range(len(l) + 1):
-                for j in range(i):
-                    lists.append(l[j: i])
-            return lists
-        
-        tmp=sub_lists(binary)
-        #print(tmp)
-        res=[]
-        for l in tmp:
-            res_m=[]
-            res_h=[]
-            if len(l)==turnedOn:
-                for i in l:
-                    if i[:-1]=="m":
-                        res_m.append(int(i[:len(i)-1]))
-                    else:
-                        res_h.append(int(i[:len(i)-1]))
-            
-            H=str(sum(res_h))
-            M=str(sum(res_m))
-            print(H,M)
-            
-            if H=="0":
-                H="00" 
-                
-            if M=="0":
-                M="00"
-            
-            res.append(H+":"+M)
-                
-            for i in res:
-                if(i == "00:00"):
-                    res.remove(i)
-    
-    
-        return res
+ 
+def readBinaryWatch(self, num):
+    return ['%d:%02d' % (h, m) for h in range(12) for m in range(60) if (bin(h) + bin(m)).count('1') == num]
