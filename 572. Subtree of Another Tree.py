@@ -20,7 +20,7 @@ def isMatch(self, s, t):
             self.isMatch(s.left, t.left) and 
             self.isMatch(s.right, t.right))
 
-def isSubtree(self, s, t):
+def isSubtree(self, s, t): # main function
     if self.isMatch(s, t): return True
     if not s: return False
     return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
