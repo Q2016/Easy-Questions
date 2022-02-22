@@ -1,6 +1,6 @@
 Question:
 You are given an integer array nums consisting of n elements, and an integer k. Find a contiguous subarray whose length is equal to k that has 
-the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
+the maximum average value and return this value. 
 
 Example 1:
 Input: nums = [1,12,-5,-6,50,3], k = 4
@@ -9,22 +9,33 @@ Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
 
 
 Solution: Sliding Window
-Instead of creating a cumulative sum array first, and then traversing over it to determine the required sum, we can simply traverse 
-over numsnums just once, and on the go keep on determining the sums possible for the subarrays of length k. To understand the idea, 
-assume that we already know the sum of elements from index i to index i+k, say it is x. Now, to determine the sum of elements from the 
-index i+1 to the index i+k+1, all we need to do is to subtract the element nums[i] from x and to add the element nums[i+k+1] to x. We 
-can carry out our process based on this idea and determine the maximum possible average.
+We want to find the maximum K-length sum. After, we can divide by K to get the average.
+We have two techniques for getting these sums efficiently: prefix sums, or sliding window.
 
-public class Solution {
-    public double findMaxAverage(int[] nums, int k) {
-        double sum=0;
-        for(int i=0;i<k;i++)
-            sum+=nums[i];
-        double res=sum;
-        for(int i=k;i<nums.length;i++){
-            sum+=nums[i]-nums[i-k];
-                res=Math.max(res,sum);
-        }
-        return res/k;
-    }
-}
+In the first approach, we calculate P[i] = A[0] + A[1] + ... + A[i-1] in linear time. Then, A[i] + A[i+1] + ... + A[i+K-1] = P[i+K] - P[i], 
+and we should find the max of these.
+
+
+def findMaxAverage(self, A, K):
+    P = [0]
+    for x in A:
+        P.append(P[-1] + x)
+
+    ma = max(P[i+K] - P[i] 
+             for i in xrange(len(A) - K + 1))
+    return ma / float(K)
+
+In the second approach, we maintain su = the sum of A[i-K+1] + A[i-K+2] + ... + A[i]. Then, when we have K elements in this sum (if i >= K-1), 
+it is a candidate to be the maximum sum ma.
+
+
+def findMaxAverage(self, A, K):
+    su = 0
+    ma = float('-inf')
+    for i, x in enumerate(A):
+        su += x
+        if i >= K:
+            su -= A[i-K]
+        if i >= K - 1:
+            ma = max(ma, su)
+    return ma / float(K)
