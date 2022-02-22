@@ -6,15 +6,16 @@ Example 1:
 Input: root = [5,4,5,1,1,5]
 Output: 2
 
-Solution: Similar to Diameter of Binary Tree question
+    
+Solution: DFS, Similar to Diameter of Binary Tree
+    
 The approach is similar to the Diameter of Binary Tree question except that we reset the left/right to 0 whenever the current node does not match 
 the children node value. In the Diameter of Binary Tree question, the path can either go through the root or it doesn't.
 Hence at the end of each recursive loop, return the longest length using that node as the root so that the node's parent can potentially use it 
-in its longest path computation.
-We also use an external variable longest that keeps track of the longest path seen so far.
+in its longest path computation. We also use an external variable longest that keeps track of the longest path seen so far.
 
 
-class Solution(object):
+
     def longestUnivaluePath(self, root):
         longest = [0]
         def traverse(node):
