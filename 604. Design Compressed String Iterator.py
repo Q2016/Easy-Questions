@@ -4,9 +4,7 @@ The given compressed string will be in the form of each letter followed by a pos
 existing in the original uncompressed string.
 next() - if the original string still has uncompressed characters, return the next letter; Otherwise return a white space.
 hasNext() - Judge whether there is any letter needs to be uncompressed.
-Note:
-Please remember to RESET your class variables declared in StringIterator, as static/class variables are persisted across multiple test cases. 
-Please see here for more details.
+
 Example:
 StringIterator iterator = new StringIterator("L1e2t1C1o1d1e1");
 
@@ -23,13 +21,11 @@ iterator.hasNext(); // return false
 iterator.next(); // return ' '
 
 
-
 Solution:
 # saperate letters from numbers
 class StringIterator(object):
 
     def __init__(self, compressedString):
-
         self.letters = []
         self.nums = []
         idx = 0
@@ -48,9 +44,6 @@ class StringIterator(object):
         
 
     def next(self):
-        """
-        :rtype: str
-        """
         if self.count == 0:
             self.idx += 1
             if self.idx >= len(self.letters):
@@ -59,11 +52,7 @@ class StringIterator(object):
         self.count -= 1
         return self.letters[self.idx]
         
-
     def hasNext(self):
-        """
-        :rtype: bool
-        """
         if self.count == 0:
             self.idx += 1
             if self.idx >= len(self.letters):
