@@ -14,7 +14,6 @@ Solution: BST
 class Solution:
     def findRadius(self, houses: List[int], heaters: List[int]) -> int:
         
-        
         def binary_search_recursive(array, element, start, end):
             if start > end:
                 return -1
@@ -27,7 +26,6 @@ class Solution:
                 return binary_search_recursive(array, element, start, mid-1)
             else:
                 return binary_search_recursive(array, element, mid+1, end)
-        
-        
+       
         for h in houses:
             binary_search_recursive(heaters, h, heaters[0], heaters[-1])
