@@ -14,8 +14,6 @@ the children node value. In the Diameter of Binary Tree question, the path can e
 Hence at the end of each recursive loop, return the longest length using that node as the root so that the node's parent can potentially use it 
 in its longest path computation. We also use an external variable longest that keeps track of the longest path seen so far.
 
-
-
     def longestUnivaluePath(self, root):
         longest = [0]
         def traverse(node):
