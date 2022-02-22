@@ -6,7 +6,13 @@ Input: nums = [4,3,2,7,8,2,3,1]
 Output: [5,6]
 
 
-
+        # For each number i in nums,
+21
+        # we mark the number that i points as negative.
+22
+        # Then we filter the list, get all the indexes
+23
+        # who points to a positive number
 Solution:
 For each number i in nums,
 we mark the number that i points as negative.
@@ -17,10 +23,6 @@ Since those indexes are not visited.
 class Solution(object):
     def findDisappearedNumbers(self, nums):
 
-        # For each number i in nums,
-        # we mark the number that i points as negative.
-        # Then we filter the list, get all the indexes
-        # who points to a positive number
         for i in xrange(len(nums)):
             index = abs(nums[i]) - 1
             nums[index] = - abs(nums[index])
