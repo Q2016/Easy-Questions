@@ -8,8 +8,9 @@ Input: points = [[0,0],[1,0],[2,0]]
 Output: 2
 Explanation: The two boomerangs are [[1,0],[0,0],[2,0]] and [[1,0],[2,0],[0,0]].
 
+
 Solution:
-class Solution:
+
     def numberOfBoomerangs(self, points: List[List[int]]) -> int:
         def sub_lists(l,m):
             lists = [[]]
@@ -17,16 +18,13 @@ class Solution:
                 for j in range(i):
                     lists.append(l[j: i])
             return [p for p in lists if len(p)==m]
-
+        
         if len(points)<3:
             return 0
-
         p=points.copy()
-
         n=0
         for i in points:
             p.remove(i)
-
             p_list=sub_lists(p,2)
             #print(p_list)
             for pp in p_list:
