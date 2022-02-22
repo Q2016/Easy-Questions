@@ -8,7 +8,7 @@ Input: a = "abcd", b = "cdabcdab"
 Output: 3
 Explanation: We return 3 because by repeating a three times "abcdabcdabcd", b is a substring of it.
 
-Solution:
+Solution: One pass
 class Solution:
     def repeatedStringMatch(self, A: str, B: str) -> int:
         temp = ""
