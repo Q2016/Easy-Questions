@@ -5,3 +5,6 @@ Questions not clear:
 
 Regix:
 520
+
+Use of Ord:
+67
