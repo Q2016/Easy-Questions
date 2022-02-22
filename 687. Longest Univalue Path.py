@@ -6,32 +6,30 @@ Example 1:
 Input: root = [5,4,5,1,1,5]
 Output: 2
 
-Solution:
+Solution: Similar to Diameter of Binary Tree question
+The approach is similar to the Diameter of Binary Tree question except that we reset the left/right to 0 whenever the current node does not match 
+the children node value. In the Diameter of Binary Tree question, the path can either go through the root or it doesn't.
+Hence at the end of each recursive loop, return the longest length using that node as the root so that the node's parent can potentially use it 
+in its longest path computation.
+We also use an external variable longest that keeps track of the longest path seen so far.
 
-# made an assumption that repeateds are connected
-# you have to bottom up not top down
 
-class Solution:
-    def longestUnivaluePath(self, root: Optional[TreeNode]) -> int:
-        
-        res=[]
-        
-        def dfs(node):
-            if not node: return 0
-            rightdfs(node.right)
-            dfs(node.left)
-            if node.right and node.right.val==node.val:
-                l_right+=1
-            if node.left and node.left.val==node.val:
-                l_left=+=1
-            
-            res.append(node.val)
-        
-        
-        if not root: return 0
-        
-        dfs(root)
-        cnt=Counter(res)
-        #print(cnt)
-        #print(cnt.most_common(1)[0][1])
-        return(cnt.most_common(1)[0][1]-1)
+class Solution(object):
+    def longestUnivaluePath(self, root):
+        longest = [0]
+        def traverse(node):
+            if not node:
+                return 0
+            left_len, right_len = traverse(node.left), traverse(node.right)
+            left = (left_len + 1) if node.left and node.left.val == node.val else 0
+            right = (right_len + 1) if node.right and node.right.val == node.val else 0
+            longest[0] = max(longest[0], left + right)
+            return max(left, right)
+        traverse(root)
+        return longest[0]
+    
+    
+    
+Time: O(n)
+Space: O(n)
+    
