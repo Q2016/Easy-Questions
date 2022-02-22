@@ -23,6 +23,5 @@ class Solution(object):
         emap = {e.id: e for e in employees}
         def dfs(eid):
             employee = emap[eid]
-            return (employee.importance +
-                    sum(dfs(eid) for eid in employee.subordinates))
+            return (employee.importance + sum(dfs(eid) for eid in employee.subordinates))
         return dfs(query_id)
