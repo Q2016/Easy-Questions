@@ -16,6 +16,7 @@ Explanation: From the center of the image with position (sr, sc) = (1, 1) (i.e.,
 same color as the starting pixel (i.e., the blue pixels) are colored with the new color.
 Note the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.
 
+
 Solution: Depth-First Search
 We perform the algorithm explained in the problem description: paint the starting pixels, plus adjacent pixels of the same color, and so on.
 Say color is the color of the starting pixel. Let's floodfill the starting pixel: we change the color of that pixel to the new color, 
