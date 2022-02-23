@@ -1,7 +1,7 @@
 # Easy-Questions
 
 Questions not clear:
-415, 422, 293, 299, 706
+415, 422, 293, 299, 706, 717
 
 Regix:
 520
