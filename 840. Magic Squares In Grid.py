@@ -1,38 +1,34 @@
 Question:
 A 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.
-Given a row x col grid of integers, how many 3 x 3 "magic square" subgrids are there?  (Each subgrid is contiguous).
+Given a row x col grid of integers, how many 3 x 3 "magic square" subgrids are there? 
 
-
+Example 1:
+Input: grid = [[4,3,8,4], Output: 1
+               [9,5,1,9],
+               [2,7,6,2]]
+    
 Solution:
-    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:
-        m=grid[0]#col
-        n=grid#row
-        
-        def findRows(grid: List[List[int])-> int:
-                   
-                                
-        def findCols(grid: List[List[int])-> int:
-                                
-        def findDiag(grid: List[List[int])-> int:
-        
-        def findADiag(grid: List[List[int])-> int:
-        
-        
-        cnt=0
-        for i in range(m-3):
-            for j in range(n-3):
-                flag=False
-                                 
-                tmp=grid[j:j+3][i:i+3]# row, col
-                a1=findRows(tmp)
-                a2=findCols(tmp)
-                a3=findDiag(tmp)
-                a4=findADiag(tmp)
-                
-                if a1==a2 and a2==a3 and a3==a4:
-                    flag=True
-                                 
-                if flag==True:
-                    cnt+=1
-                                 
+class Solution:
+    def numMagicSquaresInside(self, grid):
+        cnt = 0
+        # Construct the 3x3 square
+        for i in range(len(grid)-2):
+            for j in range(len(grid)-2):
+                temp_grid = [grid[i+k][j:j+3] for k in range(3)]
+                if self.isMagicSquare(temp_grid):
+                    cnt += 1
         return cnt
+        
+    
+    def isMagicSquare(self, grid):
+        # Check the elements
+        flat = [num for row in grid for num in row]
+        if sorted(flat) != [1, 2, 3, 4, 5, 6, 7, 8, 9]:
+            return False
+        # Check the row, column and diagnal sums
+        row_sums = [sum(row) for row in grid]
+        col_sums = [sum([row[i] for row in grid]) for i in range(3)]
+        diag_sums = [sum([grid[i][i] for i in range(3)]), (grid[0][2] + grid[1][1] + grid[2][0])]
+        row_sums.extend(col_sums)
+        row_sums.extend(diag_sums)
+        return len(set(row_sums)) == 1
