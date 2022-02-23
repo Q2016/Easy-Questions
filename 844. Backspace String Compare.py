@@ -8,16 +8,19 @@ Output: true
 Explanation: Both s and t become "ac".
   
 Solution:
-class Solution:
-    def backspaceCompare(self, S: str, T: str) -> bool:
+
+    def backspaceCompare(self, S, T):
+        l1 = self.stack(S, [])
+        l2 = self.stack(T, [])
+        return l1 == l2
         
-        
-        def build(S):
-            ans = []
-            for c in S:
-                if c != '#':
-                    ans.append(c)
-                elif ans:
-                    ans.pop()
-            return "".join(ans)
-        return build(S) == build(T)  
+    
+    def stack(self, S, stack):
+        for char in S:
+            if char is not "#":
+                stack.append(char)
+            else:
+                if not stack:
+                    continue
+                stack.pop()
+        return stack 
