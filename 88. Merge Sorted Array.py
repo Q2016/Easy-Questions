@@ -13,6 +13,14 @@ The result of the merge is [1,2,2,3,5,6] with the underlined elements coming fro
 
 
 Solution:
+Since we have free space (the zeros) at the end of nums1, that is the direction into which we must "spread" the numbers of nums1 and nums2. 
+That is why this solution compares and swaps the numbers starting from the end of both given sorted arrays and moves through them backwards. 
+Starting from the beginning leads only to a mess of over-swapping (what I was trying...). We would start from the beginning and move forwards only if, 
+for example, the free space was at the beginning of nums1.
+Complexity:
+O(m + n) time complexity
+O(1) space complexity
+
 def merge(self, nums1, m, nums2, n):
         while m > 0 and n > 0:
             if nums1[m-1] >= nums2[n-1]:
