@@ -9,9 +9,8 @@ Output: true
 Explanation: 'a' and 'e' in 'alex' were long pressed.
 
 
-Solution:
+Solution: Two pointers
 
-class Solution(object):
     def isLongPressedName(self, name, typed):
         j = 0
         i = 0
