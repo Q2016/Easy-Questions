@@ -1,20 +1,18 @@
 Question:
-Let's call an array arr a mountain if the following properties hold:
-
-arr.length >= 3
-There exists some i with 0 < i < arr.length - 1 such that:
-arr[0] < arr[1] < ... arr[i-1] < arr[i]
-arr[i] > arr[i+1] > ... > arr[arr.length - 1]
-Given an integer array arr that is guaranteed to be a mountain, return any i such that 
-arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1].
+Given an integer array arr that is guaranteed to be a mountain, return any i such that          /\
+arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1].            /  \
+                                                                                              /    \
 
 
-Solution:
-class Solution:
+Solution: Linear Scan
+
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
-        
-        for i, a in enumerate(arr):
-            if arr[i]>arr[i+1]:
+        n = len(arr)
+        for i in range(1, n-1):
+            if arr[i-1] < arr[i] > arr[i+1]:
                 return i
+
             
-        return -1
+Complexity:
+Time: O(N)
+Space: O(1)
