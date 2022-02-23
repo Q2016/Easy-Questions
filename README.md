@@ -8,3 +8,6 @@ Regix:
 
 Use of Ord:
 67, 709
+
+Trie:
+720
