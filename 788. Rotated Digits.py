@@ -12,20 +12,13 @@ Explanation: There are four good numbers in the range [1, 10] : 2, 5, 6, 9.
 Note that 1 and 10 are not good numbers, since they remain unchanged after rotating.
 
 Solution:
-class Solution:
-    def rotatedDigits(self, n: int) -> int:
-        m=0
-        for i in range(n+1):
-            string=str(i)
-            tmp1=True
-            tmp2=False
-            for c in string:
-                if c in ["0","1","8","2","5","6","9"]: 
-                    tmp1=tmp1 and True
-                    if c in ["2","5","6","9"]:
-                        tmp2=True
-                else:
-                    tmp1=tmp1 and False     
-            if tmp1 and tmp2:
-                m+=1
-        return m
+
+    def rotatedDigits(self, N):
+        counts = 0
+        for num in range(1, N+1):
+            number = str(num)
+            if '3' in number or '7' in number or '4' in number: # This will be an invalid number upon rotation
+                continue # Skip this number and go to next iteration
+            if '2' in number or '5' in number or '6' in number or '9' in number:
+                counts += 1
+        return counts
