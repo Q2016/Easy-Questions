@@ -3,6 +3,9 @@
 Questions not clear:
 415, 422, 293, 299, 706, 717, 748, 758, 800, 811, 819, 821
 
+Solution not clear:
+119
+
 Regix:
 520
 
