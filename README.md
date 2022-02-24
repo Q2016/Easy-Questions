@@ -14,3 +14,6 @@ Use of Ord:
 
 Trie:
 720
+
+Bits:
+190
