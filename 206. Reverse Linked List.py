@@ -16,5 +16,8 @@ https://leetcode.com/problems/reverse-linked-list/discuss/1449712/Easy-C%2B%2BJa
              cur.next = prev
              prev = cur
              cur = n
-
          return prev
+
+        
+This link is about my assignment confusion in Python:
+https://stackoverflow.com/questions/3232376/python-variable-assignment-confusion/3232936
