@@ -41,8 +41,19 @@ fence 1, which = k * (k-1). The number of ways of painting the third fence with 
 ways of fence 2 * (k-1) = (k + k*(k-1)) * (k-1).
 
 
+Which one in below is correct?
 
-class Solution:
+def numWays(self, n: int, k: int) -> int:
+        if n == 0:
+            return 0
+        if n == 1:
+            return k
+        same, dif = k, k*(k-1)
+        for i in range(3, n+1):
+            same, dif = dif, (same+dif)*(k-1)
+        return same + dif
+
+
   def numWays(self, n: int, k: int) -> int:
     if n == 0:
       return 0
