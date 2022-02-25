@@ -22,3 +22,7 @@ Definition of get:
 242
 
 Use paper for all Tree questions
+
+
+Educational:
+278: Binary search
