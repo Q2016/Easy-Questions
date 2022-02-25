@@ -1,7 +1,7 @@
 Question:
 Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],…] (si < ei), determine if a person could attend all meetings.
+(person cant jump from one meeting to another unless it's finished)
 
-Sample I/O
 Example 1
 Input: [[0,30],[5,10],[15,20]]
 Output: false
