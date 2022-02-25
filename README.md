@@ -17,3 +17,6 @@ Trie:
 
 Bits:
 190, 231
+
+Definition of get:
+242
