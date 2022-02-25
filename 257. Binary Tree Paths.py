@@ -3,7 +3,7 @@ Given the root of a binary tree, return all root-to-leaf paths in any order. A l
 
 
 Solution:
-# dfs + stack
+# dfs top down + stack
     def binaryTreePaths1(self, root):
         if not root:
             return []
