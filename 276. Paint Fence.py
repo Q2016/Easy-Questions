@@ -18,6 +18,10 @@ Explanation: Take c1 as color 1, c2 as color 2. All possible ways are:
    5         c2     c1     c2
    6         c2     c2     c1
 
+
+
+Solution: DP
+
 How do we go about solving this problem?
 If we really think about it, this problem is closely related to counting.
 Say we have just a single fence. In how many ways can we colour it with ‘k’ colours?
@@ -36,7 +40,7 @@ for the third fence to be painted with the same colour as the second fence = dif
 fence 1, which = k * (k-1). The number of ways of painting the third fence with a different colour = total number of 
 ways of fence 2 * (k-1) = (k + k*(k-1)) * (k-1).
 
-Solution: DP
+
 
 class Solution:
   def numWays(self, n: int, k: int) -> int:
