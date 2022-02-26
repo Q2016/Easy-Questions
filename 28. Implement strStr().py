@@ -6,14 +6,14 @@ What should we return when needle is an empty string? This is a great question t
 For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
 
 Example 1:
-Input: haystack = "hello", needle = "ll"
-Output: 2
+Input: haystack = "hello", needle = "ll", Output: 2
 
+        
+        
 Solution:
 
 def strStr(self, haystack, needle):
-
-    for i in range(len(haystack) - len(needle)+1):
+    for i in range(len(haystack) - len(needle) + 1):
         if haystack[i:i+len(needle)] == needle:
             return i
     return -1
