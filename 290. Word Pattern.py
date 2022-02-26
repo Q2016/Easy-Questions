@@ -1,10 +1,11 @@
 Question:
-Given a pattern and a string s, find if s follows the same pattern. Here follow means a full match, such that there is a bijection between a 
-letter in pattern and a non-empty word in s.
+Given a pattern and a string s, find if s follows the same pattern. 
 
 Example 1:
 Input: pattern = "abba", s = "dog cat cat dog"
 Output: true
+  
+  
   
 Solution: Hashmap
 At the first glance, the problem can be solved simply by using a hashmap w_to_p which maps words to letters from the pattern. 
