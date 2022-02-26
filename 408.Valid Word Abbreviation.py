@@ -9,7 +9,7 @@ Return true.
 
 
 
-Solution: Two loops
+Solution: Two loops and Two pointers
 It's one of the question that require leetcode membership
 
     def validWordAbbreviation(self, word, abbr):
