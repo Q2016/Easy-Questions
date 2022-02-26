@@ -8,7 +8,8 @@ Input: s = "abc", t = "ahbgdc"
 Output: true
 
     
-Solution: Dynamic programming
+    
+Solution: Dynamic programming (Reduce the problem to smaller ones)
 The first solution I think when I see this problem is dynamic programming. Let dp[i][j] = 1 if s[:j] is substring of t[:i]. How can we find it:
 
 If s[j] == t[i], then we need to search string s[:j-1] in t[:i-1]
