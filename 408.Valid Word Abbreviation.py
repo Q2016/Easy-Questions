@@ -11,9 +11,8 @@ Return true.
 
 Solution:
 
-class Solution(object):
-    def validWordAbbreviation(self, word, abbr):
 
+    def validWordAbbreviation(self, word, abbr):
         w = 0
         a = 0
         while w < len(word) and a < len(abbr):
@@ -26,8 +25,6 @@ class Solution(object):
             else:
                 if word[w] != abbr[a]:
                     return False
- 
                 w += 1
                 a += 1
- 
         return w == len(word) and a == len(abbr)
