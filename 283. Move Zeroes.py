@@ -6,7 +6,9 @@ Example 1:
 Input: nums = [0,1,0,3,12]
 Output: [1,3,12,0,0]
 
-Solution: In-place
+    
+    
+Solution: In-place (smart solution)
     
 def moveZeroes(self, nums):
     zero = 0  # records the position of "0"
