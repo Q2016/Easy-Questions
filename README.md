@@ -16,7 +16,7 @@ Trie:
 720
 
 Bits:
-190, 231
+190, 231, 389
 
 Definition of get:
 242
