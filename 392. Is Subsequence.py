@@ -9,6 +9,7 @@ Output: true
 
     
     
+    
 Solution: Dynamic programming (Reduce the problem to smaller ones)
 The first solution I think when I see this problem is dynamic programming. Let dp[i][j] = 1 if s[:j] is substring of t[:i]. How can we find it:
 
