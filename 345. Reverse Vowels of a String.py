@@ -6,19 +6,22 @@ Example 1:
 Input: s = "hello"
 Output: "holle"
 
+Example 2:
+Input: s = "leetcode"
+Output: "leotcede"    
+    
+    
+    
 Solution: Two passes
 
     def reverseVowels(self, s: str) -> str:
         
         s=list(s)
-        
         vowels=[]
         for c in s:
             if c in ["a","e","i","o","u","A","E","I","O","U"]:
-                vowels.append(c)
-        
+                vowels.append(c)   
         vowels=vowels[::-1]
-        
         res=[]                
         n=0
         for c in s:
@@ -26,7 +29,6 @@ Solution: Two passes
                 res.append(vowels[n])
                 n+=1
             else:
-                res.append(c)
-                
+                res.append(c)        
         return "".join(res)
       
