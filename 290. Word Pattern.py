@@ -16,8 +16,6 @@ pattern and unique words from the string.
 Space: O(n) - scan
 Time: O(n) - for the hashmap
 
-Runtime: 28 ms, faster than 85.44% of Python3 online submissions for Word Pattern.
-Memory Usage: 14 MB, less than 94.65% of Python3 online submissions for Word Pattern.
 
 def wordPattern(self, p: str, s: str) -> bool:
     words, w_to_p = s.split(' '), dict()
