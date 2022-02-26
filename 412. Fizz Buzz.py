@@ -10,7 +10,7 @@ Input: n = 3
 Output: ["1","2","Fizz"]
 
  
-Solution: Hashing
+Solution: Hashing: using key
 We can put all these mappings in a Hash Table.
   
   class Solution:
