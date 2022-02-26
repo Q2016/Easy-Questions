@@ -27,3 +27,18 @@ class Solution:
             if ans % 2 == 0 and v % 2 == 1:
                 ans += 1
         return ans  
+      
+      
+      
+or a simpler solution:
+
+    def longestPalindrome(self, s):
+
+        hash = set()
+        for c in s:
+            if c not in hash:
+                hash.add(c)
+            else:
+                hash.remove(c)
+        # len(hash) is the number of the odd letters
+        return len(s) - len(hash) + 1 if len(hash) > 0 else len(s)  
