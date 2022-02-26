@@ -25,6 +25,9 @@ Use paper for all Tree questions
 
 
 Educational:
-278: Binary search //
-35: Binary search boundary //
-404: Sum of Left Leaves //
+
+278: Binary search 
+
+35: Binary search boundary 
+
+404: Sum of Left Leaves 
