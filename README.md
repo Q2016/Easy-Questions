@@ -23,6 +23,7 @@ Definition of get:
 
 Use paper for all Tree questions
 
+404, 501
 
 Educational:
 
@@ -30,4 +31,3 @@ Educational:
 
 278: Binary search 
 
-404: Sum of Left Leaves 
