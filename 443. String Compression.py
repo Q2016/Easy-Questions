@@ -11,7 +11,7 @@ Output: Return 6, and the first 6 characters of the input array should be: ["a",
 Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3"
 
     
-Solution: Two pointers
+Solution: Two pointers (Two loops)
 # https://www.youtube.com/watch?v=3oaPh7BQa3U
 
 class Solution:
