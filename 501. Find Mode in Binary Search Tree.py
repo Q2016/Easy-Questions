@@ -2,7 +2,12 @@ Question:
 Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it.
 If the tree has more than one mode, return them in any order.
 
+Example 1:
+Input: root = [1,null,2,2]
+Output: [2]
 
+    
+    
 Solution: Inorder traversal
 Inorder traversal of a BST will find the nodes in ascending order. So just compare the current node to the previous, and if they match, 
 increase the current count of duplicate values by 1. If they don't match, reset the current count to 1. Compare the current count to the 
