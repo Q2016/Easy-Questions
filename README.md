@@ -21,9 +21,7 @@ Bits:
 Definition of get:
 242
 
-Use paper for all Tree questions
-
-404, 501
+Use paper for all Tree questions: 404, 501
 
 Educational:
 
