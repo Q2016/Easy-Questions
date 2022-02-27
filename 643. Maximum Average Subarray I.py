@@ -19,11 +19,12 @@ and we should find the max of these.
 def findMaxAverage(self, A, K):
     P = [0]
     for x in A:
-        P.append(P[-1] + x)
+        P.append(P[-1] + x) # creates cumsum
 
-    ma = max(P[i+K] - P[i] 
-             for i in xrange(len(A) - K + 1))
+    ma = max(P[i+K] - P[i] for i in range(len(A) - K + 1)) # sliding window
     return ma / float(K)
+
+
 
 In the second approach, we maintain su = the sum of A[i-K+1] + A[i-K+2] + ... + A[i]. Then, when we have K elements in this sum (if i >= K-1), 
 it is a candidate to be the maximum sum ma.
