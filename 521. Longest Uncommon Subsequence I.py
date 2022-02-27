@@ -21,10 +21,10 @@ required subsequence, as out of these two strings one string will never be a sub
 length(b). length(a)!= length(b) Example abcdabcd and abcabc. In this case we can consider bigger string as a required subsequence 
 because bigger string can't be a subsequence of smaller string. Hence, return max(length(a),length(b)).
 
-public class Solution {
-    public int findLUSlength(String a, String b) {
-        if (a.equals(b))
-            return -1;
-        return Math.max(a.length(), b.length());
-    }
-}
+
+    def findLUSlength(a, b):
+        if (a==b):
+            return -1
+        return max(len(a), len(b)) # first thought this may had to be min haha!
+    
+
