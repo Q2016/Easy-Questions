@@ -1,24 +1,30 @@
 Question:
-Given an unsorted array of integers nums, return the length of the longest continuous increasing subsequence (i.e. subarray). The 
-subsequence must be strictly increasing. A continuous increasing subsequence is defined by two indices l and r (l < r) such that it is 
-[nums[l], nums[l + 1], ..., nums[r - 1], nums[r]] and for each l <= i < r, nums[i] < nums[i + 1].
+Given an unsorted array of integers nums, return the length of the longest continuous increasing subsequence. 
 
 Example 1:
 Input: nums = [1,3,5,4,7]
 Output: 3
-Explanation: The longest continuous increasing subsequence is [1,3,5] with length 3.
-Even though [1,3,5,7] is an increasing subsequence, it is not continuous as elements 5 and 7 are separated by element
-4.
+Explanation: The longest continuous increasing subsequence is [1,3,5] with length 3. Even though [1,3,5,7] is an increasing subsequence, it is not 
+continuous as elements 5 and 7 are separated by element 4.
 
 
-Solution: Sliding Window
-Every (continuous) increasing subsequence is disjoint, and the boundary of each such subsequence occurs whenever nums[i-1] >= nums[i]. 
-When it does, it marks the start of a new increasing subsequence at nums[i], and we store such i in the variable anchor.
-For example, if nums = [7, 8, 9, 1, 2, 3], then anchor starts at 0 (nums[anchor] = 7) and gets set again to anchor = 3 (nums[anchor] = 1). 
-Regardless of the value of anchor, we record a candidate answer of i - anchor + 1, the length of the subarray nums[anchor], nums[anchor+1], ..., nums[i]; 
-and our answer gets updated appropriately.
+Solution: Two pointers
 
-class Solution(object):
+    def findLengthOfLCIS(self, nums):
+        if not nums:
+            return 0
+        left = 0
+        n = 1
+        for right in range(1, len(nums)):
+            if nums[right-1] < nums[right]:
+                n = max(n, right - left + 1)
+            else:
+                left = right
+        return n    
+    
+    
+Sliding Window:
+
     def findLengthOfLCIS(self, nums):
         ans = anchor = 0
         for i in range(len(nums)):
