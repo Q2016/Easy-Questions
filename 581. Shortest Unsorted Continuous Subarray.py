@@ -40,7 +40,7 @@ Space complexity: Using only 5 variables and it is constant: O(5) = O(1)
         if l > r:
             return 0
         temp = nums[l:r+1]
-        tempMin = min(temp)
+        tempMin = min(temp) # Consider a[min ...max]b we have: min>a and max <b. Expand the boundary until this is satisfied
         tempMax = max(temp)
         while l > 0 and tempMin < nums[l-1]:
             l -= 1
