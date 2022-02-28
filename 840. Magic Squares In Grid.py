@@ -9,17 +9,19 @@ Input: grid = [[4,3,8,4], Output: 1
     
 Solution:
 class Solution:
+    
+    # send 3x3 matrix blocks
     def numMagicSquaresInside(self, grid):
         cnt = 0
         # Construct the 3x3 square
         for i in range(len(grid)-2):
             for j in range(len(grid)-2):
-                temp_grid = [grid[i+k][j:j+3] for k in range(3)]
+                temp_grid = [grid[i+k][j:j+3] for k in range(3)] # pythonic way of sending a block array
                 if self.isMagicSquare(temp_grid):
                     cnt += 1
         return cnt
         
-    
+    # check for each block if it's magic
     def isMagicSquare(self, grid):
         # Check the elements
         flat = [num for row in grid for num in row]
