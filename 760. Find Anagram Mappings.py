@@ -8,7 +8,7 @@ B = [50, 12, 32, 46, 28]
 We should return [1, 4, 3, 2, 0] as P[0] = 1 because the 0th element of A appears at B[1], and P[1] = 4 because the 1st element of A appears at B[4], and so on.
 
 
-Solution:
+Solution: Teaching how to use python index command
 Find A’s numbers’ indices in B.
 
     def anagramMappings(self, A: List[int], B: List[int]) -> List[int]:
