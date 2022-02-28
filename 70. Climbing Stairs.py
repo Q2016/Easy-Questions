@@ -10,7 +10,7 @@ Explanation: There are two ways to climb to the top.
 2. 2 steps
 
 
-Solution:
+Solution: DP
 # Top down - TLE
 def climbStairs1(self, n):
     if n == 1:
