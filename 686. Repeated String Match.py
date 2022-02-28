@@ -9,8 +9,8 @@ Explanation: We return 3 because by repeating a three times "abcdabcdabcd", b is
 
 
 
-Solution: One pass or Counter
 
+Solution: One pass or Counter
     def repeatedStringMatch(self, A: str, B: str) -> int:
         temp = ""
         count = 0
