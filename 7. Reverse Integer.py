@@ -9,7 +9,8 @@ Output: 321
     
     
 Solution:
-    def reverse(self, x): #not a good question but it's an accepted answer python doesnt have
+    def reverse(self, x): 
+        #not a good question but it's an accepted answer
         return int(str(x)[::-1]) if x>=0 else -int(str(-x)[::-1]) 
     
 or:    
