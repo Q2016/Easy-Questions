@@ -17,7 +17,8 @@ Explanation: The grid looks as follows:
   ghi
 Columns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 column.
 
-Solution:
+
+Solution: Two loops straight forward 
 	def minDeletionSize(self, strs: List[str]) -> int:
         m, n = len(strs), len(strs[0])
         count = 0
