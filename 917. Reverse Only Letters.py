@@ -6,7 +6,7 @@ Example 1:
 Input: s = "ab-cd"
 Output: "dc-ba"
 
-Solution:Stack of Letters
+Solution: IS this correct?
 Collect the letters of S separately into a stack, so that popping the stack reverses the letters. (Alternatively, we could have collected 
 the letters into an array and reversed the array.) Then, when writing the characters of S, any time we need a letter, we use the 
 one we have prepared instead.
@@ -17,7 +17,7 @@ class Solution(object):
         ans = []
         for c in S:
             if c.isalpha():
-                ans.append(letters.pop())
+                ans.append(letters.pop()) # pop from the end of the list
             else:
                 ans.append(c)
         return "".join(ans)
