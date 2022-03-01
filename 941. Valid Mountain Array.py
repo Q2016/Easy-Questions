@@ -8,7 +8,7 @@ There exists some i with 0 < i < arr.length - 1 such that:
 arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
 arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 
-Solution:One Pass
+Solution:One Pass (This is question 852 i.e. repetitative)
 
 If we walk along the mountain from left to right, we have to move strictly up, then strictly down.
 Algorithm
