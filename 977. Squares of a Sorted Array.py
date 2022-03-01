@@ -8,7 +8,12 @@ Explanation: After squaring, the array becomes [16,1,0,9,100].
 After sorting, it becomes [0,1,9,16,100].
 
 
-Solution:
+Solution: Two pointers
+The question boils down to understanding that if we look at the magnitude of the elements in the array at both ends and gradually 
+"slide down" and converge towards the center of the array. With that understanding, we can use two pointers, one at each end, 
+to iteratively collect the larger square to a list. However, collecting the larger square in a list with list's append, results 
+in elements sorted in descending order. To circumvent this, we need to append to the left of the list. Using a collections.deque() 
+allows us to append elements to the left of answer in O(1) time, maintaining the required increasing order.
 
 def sortedSquares(self, A):
     answer = collections.deque()
@@ -22,30 +27,15 @@ def sortedSquares(self, A):
             answer.appendleft(right * right)
             r -= 1
     return list(answer)
-The question boils down to understanding that if we look at the magnitude of the elements in the array, A, both ends "slide down" and converge towards the center of the array. With that understanding, we can use two pointers, one at each end, to iteratively collect the larger square to a list. However, collecting the larger square in a list with list's append, results in elements sorted in descending order. To circumvent this, we need to append to the left of the list. Using a collections.deque() allows us to append elements to the left of answer in O(1) time, maintaining the required increasing order.
 
-Alternative without deque or list reversal
 
-def sortedSquares(self, A):
-    answer = [0] * len(A)
-    l, r = 0, len(A) - 1
-    while l <= r:
-        left, right = abs(A[l]), abs(A[r])
-        if left > right:
-            answer[r - l] = left * left
-            l += 1
-        else:
-            answer[r - l] = right * right
-            r -= 1
-    return answer
-We first declare a list of length, len(A) then add the larger square from the back of the list, denoted by the index r - l.
+Or for O(nlog n): 
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        for i in range(len(A)):
+            A[i] *= A[i]
+        A.sort()
+        return A    
 
-Shorter, terribly unreadable version - 6 lines
-
-def sortedSquares(self, A):
-    l, r, answer = 0, len(A) - 1, [0] * len(A)
-    while l <= r:
-        left, right = abs(A[l]), abs(A[r])
-        answer[r - l] = max(left, right) ** 2
-        l, r = l + (left > right), r - (left <= right)
-    return answer
+similarly:
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        return sorted([v**2 for v in A])
