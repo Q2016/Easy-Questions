@@ -10,7 +10,8 @@ Explanation: The valid 24-hour times are "12:34", "12:43", "13:24", "13:42", "14
 Of these times, "23:41" is the latest.
 
 
-Solution:
+Solution: Use of itertools.permutations
+    
 There are two conditions that we should meet, in order to construct a valid time format:
 HH < 24: The first two digits, i.e. the hour, should be less than 24.
 MM < 60: The last two digits, i.e. the minute, should be less than 60.
