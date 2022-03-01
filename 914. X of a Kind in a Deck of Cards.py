@@ -9,7 +9,9 @@ Input: deck = [1,2,3,4,4,3,2,1]
 Output: true
 Explanation: Possible partition [1,1],[2,2],[3,3],[4,4].
 
-Solution:
+
+
+Solution: gcd
 Again, say there are C_i cards of number i. These must be broken down into piles of X cards each, ie. C_i % X == 0 for all i.
 Thus, X must divide the greatest common divisor of C_i. If this greatest common divisor g is greater than 1, then X = g will satisfy. Otherwise, it won't.
 
