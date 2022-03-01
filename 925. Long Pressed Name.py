@@ -8,6 +8,7 @@ Input: name = "alex", typed = "aaleex"
 Output: true
 Explanation: 'a' and 'e' in 'alex' were long pressed.
 
+    
 
 Solution: Two pointers
 
