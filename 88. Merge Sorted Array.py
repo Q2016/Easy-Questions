@@ -12,16 +12,19 @@ Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
 The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
 
-Solution:
+
+
+Solution:  This is a very good question
 Since we have free space (the zeros) at the end of nums1, that is the direction into which we must "spread" the numbers of nums1 and nums2. 
 That is why this solution compares and swaps the numbers starting from the end of both given sorted arrays and moves through them backwards. 
 Starting from the beginning leads only to a mess of over-swapping (what I was trying...). We would start from the beginning and move forwards only if, 
 for example, the free space was at the beginning of nums1.
+
 Complexity:
 O(m + n) time complexity
 O(1) space complexity
 
-def merge(self, nums1, m, nums2, n):
+   def merge(self, nums1, m, nums2, n):
         while m > 0 and n > 0:
             if nums1[m-1] >= nums2[n-1]:
                 nums1[m+n-1] = nums1[m-1]
@@ -29,5 +32,5 @@ def merge(self, nums1, m, nums2, n):
             else:
                 nums1[m+n-1] = nums2[n-1]
                 n -= 1
-        if n > 0:
+        if n > 0: # if m is 0 i.e. array is empty
             nums1[:n] = nums2[:n]
