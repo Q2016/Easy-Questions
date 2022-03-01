@@ -21,7 +21,7 @@ Bits:
 Definition of get:
 242
 
-Use pen & paper for all Tree questions: 404, 501, 530, 543, 559, 572, 669, 687, 700, 783
+Use pen & paper for all Tree questions: 404, 501, 530, 543, 559, 572, 669, 687, 700, 783, 872
 
 Educational:
 
