@@ -14,6 +14,8 @@ Convert the number to string and compare it with the reversed string.
 I wrote this working solution first and then found in the description that we need to solve this problem without converting the input to string. 
 Then I wrote solution 2.
 
+Or we can just use the Counter, if all even=> True if all even and one odd=>True
+
 def isPalindrome(self, x: int) -> bool:
 	if x < 0:
 		return False
