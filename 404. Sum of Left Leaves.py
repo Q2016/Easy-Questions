@@ -15,7 +15,7 @@ class Solution:
         if not root: return
         if not root.left and not root.right:
             if side == -1: self.sum += root.val
-        self.dfs(root.left, -1)
+        self.dfs(root.left, -1) # we send the new root but provide the extra info about the root whether it is right/left leg
         self.dfs(root.right, 1)
     
     def sumOfLeftLeaves(self, root):
