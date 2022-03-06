@@ -4,6 +4,13 @@ lies in [low, high]. Trimming the tree should not change the relative structure 
 (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
 Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 Solution:Recursion
 Let trim(node) be the desired answer for the subtree at that node. We can construct the answer recursively.
 When node.val > high, we know that the trimmed binary tree must occur to the left of the node. Similarly, when node.val < low, 
