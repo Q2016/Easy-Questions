@@ -8,6 +8,9 @@ Example 1:
 Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3]
 Output: true
 
+    
+    
+    
 Solution:
 If the rectangles overlap, they have positive area. This area must be a rectangle where both dimensions are positive, since the 
 boundaries of the intersection are axis aligned. Thus, we can reduce the problem to the one-dimensional problem of determining 
