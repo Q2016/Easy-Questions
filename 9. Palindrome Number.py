@@ -8,6 +8,9 @@ Output: true
 Explanation: 121 reads as 121 from left to right and from right to left.
 
 
+	
+	
+	
 Solution:
 This is the easiest way to check if integer is palindrome.
 Convert the number to string and compare it with the reversed string.
