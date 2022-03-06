@@ -6,6 +6,14 @@ Input: strs = ["flower","flow","flight"]
 Output: "fl"
 
   
+  
+  
+  
+  
+  
+  
+  
+  
 Solution:
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
