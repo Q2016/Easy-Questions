@@ -6,6 +6,15 @@ Example 1
 Input: [[0,30],[5,10],[15,20]]
 Output: false
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 Solution:
 Sort the list by start time and iterate the sorted list. If the current start time is less than previous end time, then there is conflict 
 and you can not attend all meeting.
