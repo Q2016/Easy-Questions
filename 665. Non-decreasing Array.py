@@ -7,6 +7,9 @@ Input: nums = [4,2,3]
 Output: true
 Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
 
+ 
+ 
+ 
 
 Solution: Greedy
 This problem is like a greedy problem. When you find nums[i-1] > nums[i] for some i, you will prefer to change nums[i-1]'s value, 
