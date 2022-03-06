@@ -8,6 +8,11 @@ Explanation:
 The first distinct maximum is 3. The second distinct maximum is 2. The third distinct maximum is 1.
 
 
+
+
+
+
+
 Solution:
 def thirdMax(self, nums):
         nums = set(nums)
