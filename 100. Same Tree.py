@@ -11,7 +11,7 @@ Two binary trees are considered the same if they are structurally identical, and
 
 
 Solution: Recursive
-  
+check value, check right and left legs  
 class Solution:
     def isSameTree(self, p, q):
     
