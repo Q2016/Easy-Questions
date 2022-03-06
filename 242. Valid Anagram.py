@@ -6,6 +6,14 @@ Example 1:
 Input: s = "anagram", t = "nagaram"
 Output: true  
   
+
+  
+  
+  
+  
+  
+  
+  
   
 Solution: Dictionary
   
