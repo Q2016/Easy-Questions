@@ -7,6 +7,11 @@ Input: root = [5,4,5,1,1,5]
 Output: 2
 
     
+    
+    
+    
+    
+    
 Solution: DFS, Similar to Diameter of Binary Tree
     
 The approach is similar to the Diameter of Binary Tree question except that we reset the left/right to 0 whenever the current node does not match 
