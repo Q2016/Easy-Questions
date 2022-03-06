@@ -7,6 +7,10 @@ Input: points = [[0,0],[0,1],[1,0],[0,2],[2,0]]
 Output: 2.00000
 Explanation: The five points are shown in the above figure. The red triangle is the largest.
 
+	
+	
+	
+	
 Solution:
 Shoelace Method:
 
