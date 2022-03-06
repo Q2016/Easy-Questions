@@ -7,6 +7,15 @@ Input: num = 16
 Output: true
 
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 Solution: Binary Search
  
 Solving with Bitwise trick.
