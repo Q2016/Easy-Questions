@@ -3,6 +3,15 @@ Given the heads of two singly linked-lists headA and headB, return the node at w
 lists have no intersection at all, return null.
 
 
+
+
+
+
+
+
+
+
+
 Solution:
     
 # the idea is if you switch head, the possible difference between length would be countered. 
