@@ -9,6 +9,11 @@ Output: true
 Explanation: "amanaplanacanalpanama" is a palindrome.
 
     
+    
+    
+    
+    
+    
 Solution: Two Pointers
 def isPalindrome(self, s):
     l, r = 0, len(s)-1
