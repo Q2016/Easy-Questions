@@ -8,6 +8,8 @@ Example 1:
 Input: s = "IDID"
 Output: [0,4,1,3,2]
 
+    
+    
 Solution:
 If we see say S[0] == 'I', we can always put 0 as the first element; similarly, if we see S[0] == 'D', we can always put N as the first element.
 Say we have a match for the rest of the string S[1], S[2], ... using N distinct elements. Notice it doesn't matter what the elements are, 
