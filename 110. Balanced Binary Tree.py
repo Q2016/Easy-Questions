@@ -3,6 +3,16 @@ Given a binary tree, determine if it is height-balanced. For this problem, a hei
 a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
 
 
+
+
+
+
+
+
+
+
+
+
 Solution: Recursive
 class Solution(object):
     def isBalanced(self, root):
