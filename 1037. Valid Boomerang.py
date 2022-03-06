@@ -6,6 +6,10 @@ Example 1:
 Input: points = [[1,1],[2,3],[3,2]]
 Output: true
 
+    
+    
+    
+    
 
 Solution:
 If the 3 points can form a triangle ABC, then the slopes of any 2 edges, such as AB and AC, are not equal.
