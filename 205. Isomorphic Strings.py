@@ -7,6 +7,13 @@ Example 1:
 Input: s = "egg", t = "add"
 Output: true
 
+    
+    
+    
+    
+    
+    
+    
 Solution: Hashing
     
 class Solution:
