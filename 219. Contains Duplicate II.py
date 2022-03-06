@@ -6,6 +6,18 @@ Example 1:
 Input: nums = [1,2,3,1], k = 3
 Output: true
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution:One pass + Dic
 def containsNearbyDuplicate(self, nums, k):
     dic = {}
