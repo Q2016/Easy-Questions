@@ -9,6 +9,7 @@ Output: [1,2,3,4]
 Explanation: 1200 + 34 = 1234
 
 
+    
 Solution:
 Let's add numbers in a schoolbook way, column by column. For example, to add 123 and 912, we add 3+2, then 2+1, then 1+9. Whenever 
 our addition result is more than 10, we carry the 1 into the next column. The result is 1035.
