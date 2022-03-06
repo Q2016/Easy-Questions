@@ -8,6 +8,12 @@ Output: [2]
 
     
     
+    
+    
+    
+    
+    
+    
 Solution: Inorder traversal
 Inorder traversal of a BST will find the nodes in ascending order. So just compare the current node to the previous, and if they match, 
 increase the current count of duplicate values by 1. If they don't match, reset the current count to 1. Compare the current count to the 
