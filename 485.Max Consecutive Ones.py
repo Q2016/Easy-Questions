@@ -8,6 +8,13 @@ Explanation: The first two digits or the last three digits are consecutive 1s. T
 
     
     
+    
+    
+    
+    
+    
+    
+    
 Solution: One pass
 
     def findMaxConsecutiveOnes(self, nums):
