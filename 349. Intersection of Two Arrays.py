@@ -3,6 +3,19 @@ Given two integer arrays nums1 and nums2, return an array of their intersection.
 you may return the result in any order.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Solution:
 
 The naive approach would be to iterate along the first array nums1 and to check for each value if this value in nums2 or not. 
