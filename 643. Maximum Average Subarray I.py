@@ -8,6 +8,12 @@ Output: 12.75000
 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
 
 
+    
+    
+    
+    
+    
+    
 Solution: Sliding Window
 We want to find the maximum K-length sum. After, we can divide by K to get the average.
 We have two techniques for getting these sums efficiently: prefix sums, or sliding window.
