@@ -3,6 +3,18 @@ Given the root of a Binary Search Tree (BST), return the minimum absolute differ
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 Solution:
 Just inorder travel the tree.
 Note: There are at least two nodes in this BST.
