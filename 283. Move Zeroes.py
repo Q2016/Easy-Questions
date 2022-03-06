@@ -8,6 +8,12 @@ Output: [1,3,12,0,0]
 
     
     
+    
+    
+    
+    
+    
+    
 Solution: In-place (smart solution)
     
 def moveZeroes(self, nums):
