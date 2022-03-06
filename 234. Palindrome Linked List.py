@@ -2,6 +2,19 @@ Question:
 Given the head of a singly linked list, return true if it is a palindrome.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Solution:
 Phase 1: Reverse the first half while finding the middle.
 Phase 2: Compare the reversed first half with the second half.
