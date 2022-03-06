@@ -8,6 +8,13 @@ Output: 3
 
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 Solution: Boyer-Moore Majority Vote
 We will be using Boyer-Moore Majority Vote, which will find the majority vote (element found over n/2 times) for us. We must keep a count 
 variable and a majority variable which keeps track of the current majority. The idea is to increment the count when we encounter the majority 
