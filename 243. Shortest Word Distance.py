@@ -6,6 +6,17 @@ Input: word1 = “coding”, word2 = “practice”
 Output: 3
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution:
 
 Algorithm:
