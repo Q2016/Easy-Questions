@@ -6,6 +6,15 @@ Input: num = 100
 Output: "202"
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
 Solution:
 https://runestone.academy/runestone/books/published/pythonds/BasicDS/ConvertingDecimalNumberstoBinaryNumbers.html
 
