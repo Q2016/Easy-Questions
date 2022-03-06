@@ -7,6 +7,15 @@ Output: true
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
 Solution: Hashmap
 At the first glance, the problem can be solved simply by using a hashmap w_to_p which maps words to letters from the pattern. 
 But consider this example: w = ['dog', 'cat'] and p = 'aa'. In this case, the hashmap doesn't allow us to verify whether we can 
