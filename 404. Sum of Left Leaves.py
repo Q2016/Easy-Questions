@@ -2,6 +2,20 @@ Question:
 Given the root of a binary tree, return the sum of all left leaves.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Solution: Recursively
 Very simple problem, where we just need to traverse our tree and find left leaves. Let us define dfs(self, root, side), where root is current node and 
 side is -1 if this node is left children of some other node and +1 if this node is right children of some node. Then:
