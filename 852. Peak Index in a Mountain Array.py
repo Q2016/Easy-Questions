@@ -4,6 +4,13 @@ arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 
                                                                                               /    \
 
 
+
+
+
+
+
+
+
 Solution: Linear Scan, look at the 'if' condition
 
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
