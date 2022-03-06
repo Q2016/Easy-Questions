@@ -15,7 +15,7 @@ Given the root of a binary tree, check whether it is a mirror of itself (i.e., s
 Solution: Recursive
 Basically, this question is recursively. Or we can say, the tree structure is recursively, so the recursively solution maybe easy to write:
 
-
+Start from the root, check left and right then after that check every subtree i.e. left.right with right.left and right.left with left.right 
 class Solution:
   def isSymmetric(self, root):
     if root is None:
