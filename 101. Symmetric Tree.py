@@ -2,6 +2,16 @@ Question:
 Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 
 
+
+
+
+
+
+
+
+
+
+
 Solution: Recursive
 Basically, this question is recursively. Or we can say, the tree structure is recursively, so the recursively solution maybe easy to write:
 
