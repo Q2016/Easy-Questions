@@ -13,6 +13,8 @@ Explanation: After calling your function, the input array is modified to: [1,0,0
         
         
 Solution: Two pass
+Find number of zeros and then shift
+
 If we know the number of elements which would be discarded from the end of the array, we can copy the rest. How do we find out how many 
 elements would be discarded in the end? The number would be equal to the number of extra zeros which would be added to the array. The extra 
 zero would create space for itself by pushing out an element from the end of the array.
