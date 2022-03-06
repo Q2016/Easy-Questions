@@ -4,7 +4,14 @@ Two binary trees are considered leaf-similar if their leaf value sequence is the
 Return true if and only if the two given trees with head nodes root1 and root2 are leaf-similar.
 
 
+
+
+
+
+
+
 Solution:Depth First Search
+
 Let's find the leaf value sequence for both given trees. Afterwards, we can compare them to see if they are equal or not.
 To find the leaf value sequence of a tree, we use a depth first search. Our dfs function writes the node's value if it is a 
 leaf, and then recursively explores each child. This is guaranteed to visit each leaf in left-to-right order, as left-children are 
