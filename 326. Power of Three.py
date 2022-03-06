@@ -4,6 +4,16 @@ An integer n is a power of three, if there exists an integer x such that n == 3x
 
 
 
+
+
+
+
+
+
+
+
+
+
 Solution:
 One simple way of finding out if a number n is a power of a number b is to keep dividing n by b as long as the 
 remainder is 0. This is because we can write
