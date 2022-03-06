@@ -7,6 +7,15 @@ Example 1:
 Input: s = "abcdefg", k = 2
 Output: "bacdfeg"
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution:
 We will reverse each block of 2k characters directly.
 Each block starts at a multiple of 2k: for example, 0, 2k, 4k, 6k, .... One thing to be careful about is we may not reverse each block 
