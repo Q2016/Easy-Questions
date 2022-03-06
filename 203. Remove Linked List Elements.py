@@ -6,6 +6,13 @@ Example 1:
 Input: head = [1,2,6,3,4,5,6], val = 6
 Output: [1,2,3,4,5]
 
+    
+    
+    
+    
+    
+    
+    
 
 Solution:
 Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be 
