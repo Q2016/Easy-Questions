@@ -6,6 +6,16 @@ Input: s = "loveleetcode"
 Output: 2
 
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution: Counter
 The best possible solution here could be of a linear time because to ensure that the character is unique you have to check the whole string anyway.
 The idea is to go through the string and save in a hash map the number of times each character appears in the string. That would take O(N) time, 
