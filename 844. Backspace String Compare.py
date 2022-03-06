@@ -7,6 +7,10 @@ Input: s = "ab#c", t = "ad#c"
 Output: true
 Explanation: Both s and t become "ac".
   
+  
+  
+  
+  
 Solution: stack
 
     def backspaceCompare(self, S, T):
