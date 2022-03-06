@@ -7,6 +7,11 @@ Input: arr = [1,0,2,3,0,4,5,0]
 Output: [1,0,0,2,3,0,0,4]
 Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
 
+        
+        
+        
+        
+        
 Solution: Two pass
 If we know the number of elements which would be discarded from the end of the array, we can copy the rest. How do we find out how many 
 elements would be discarded in the end? The number would be equal to the number of extra zeros which would be added to the array. The extra 
