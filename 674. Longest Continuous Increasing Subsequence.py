@@ -8,6 +8,9 @@ Explanation: The longest continuous increasing subsequence is [1,3,5] with lengt
 continuous as elements 5 and 7 are separated by element 4.
 
 
+
+
+
 Solution: Two pointers
 
     def findLengthOfLCIS(self, nums):
