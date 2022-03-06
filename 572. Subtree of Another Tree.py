@@ -7,6 +7,15 @@ Example 1:
 Input: root = [3,4,5,1,2], subRoot = [4,1,2]
 Output: true
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution: DFS
 Naive approach, O(|s| * |t|)
 For each node of s, let's check if it's subtree equals t. We can do that in a straightforward way by an isMatch function: check if 
