@@ -7,6 +7,10 @@ Example 1:
 Input: jewels = "aA", stones = "aAAbbbb"
 Output: 3
   
+  
+  
+  
+  
 Solution:
 class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
