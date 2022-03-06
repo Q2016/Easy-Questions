@@ -6,6 +6,15 @@ Example 1:
 Input: nums = [2,2,1]
 Output: 1
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution: Dictionary
 
 def singleNumber1(self, nums):
