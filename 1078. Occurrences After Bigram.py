@@ -7,6 +7,13 @@ Example 1:
 Input: text = "alice is a good girl she is a good student", first = "a", second = "good"
 Output: ["girl","student"]
 
+    
+    
+    
+    
+    
+    
+    
 Solution: Split String
 
 Split the text into words array, then loop through it to check if previous two words are first and second; If yes, add current word into list.
