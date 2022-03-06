@@ -13,17 +13,22 @@ Explanation: [0,-10,5,null,-3,null,9] is also accepted:
         
         
         
-Solution: Recursive
+Solution: Recursive (Inorder traversal)
 
-class Solution:
-    def sortedArrayToBST(self, num):
-        if not num:
-            return None
 
-        mid = len(num) // 2
+def sortedArrayToBST(num):
+    if (len(num) == 0):
+        return None
+    ead = helper(num, 0, len(num) - 1)
+    return head;
 
-        root = TreeNode(num[mid])
-        root.left = self.sortedArrayToBST(num[:mid])
-        root.right = self.sortedArrayToBST(num[mid+1:])
 
-        return root
+def helper(num, low, high):
+    if (low > high) :        
+        return None
+    mid = (low + high) / 2
+    node = TreeNode(num[mid])
+    node.left = self.helper(num, low, mid - 1)
+    node.right = self.helper(num, mid + 1, high)
+    return node
+
