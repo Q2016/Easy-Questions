@@ -15,6 +15,9 @@ Output: [1,2,3,4,5]
     
 
 Solution:
+    
+You need to check the next first.    
+    
 Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be 
 certain that we're not overlooking anything while coming up with our algorithm, and that we're testing all special cases 
 when we're ready to test. These are the edge cases that I came up with.
