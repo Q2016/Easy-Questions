@@ -10,7 +10,7 @@ Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-
 Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 Total profit is 4 + 3 = 7.
 
-Solution: One pass or DP
+Solution: Greedy
 
 For the figure
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization
@@ -27,7 +27,7 @@ This link solves all Best Time to Buy Stocks using DP:
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/900051/Fully-explained-all-buy-and-sell-problems-C%2B%2B-oror-Recursive-oror-Memoization-oror-Minor-difference	
 
 
-But this problem has a simple solution: One pass
+Below is the Greedy solution:
 
 The profit is the sum of sub-profits. Each sub-profit is the difference between selling at day j, and buying at day i (with j > i). The range [i, j] 
 should be chosen so that the sub-profit is maximum: sub-profit = prices[j] - prices[i]
