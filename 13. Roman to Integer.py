@@ -24,6 +24,9 @@ Output: 3
 Explanation: III = 3.
 
 Solution:
+    
+Roman numbers are read from right to left, create dictionary and use this info
+
 class Solution:
 # @param {string} s
 # @return {integer}
