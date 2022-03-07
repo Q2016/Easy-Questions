@@ -21,8 +21,5 @@ def hasCycle(self, head):
             return True
     return False
 
-# 16 / 16 test cases passed.
-# Status: Accepted
-# Runtime: 76 ms
-# 96.56%
+
 This way we do not need to check if head is null.
