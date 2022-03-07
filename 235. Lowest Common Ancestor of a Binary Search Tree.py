@@ -15,7 +15,7 @@ Output: 6
 Explanation: The LCA of nodes 2 and 8 is 6.
 
     
-Solution: Top down
+Solution: Top down traverse
     
 def lowestCommonAncestor(self, root, p, q):
     while root:
