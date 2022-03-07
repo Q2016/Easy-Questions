@@ -15,6 +15,12 @@ Given the head of a singly linked list, reverse the list, and return the reverse
  
   
 Solution:
+ 
+Ex. 1->2->3->4
+In short: 1) drop link between 1 and 2 
+          2) connect 1->None (None will become next element in the reversed link)  
+          3) if you draw it on paper it's simple
+
 Graphics 
 https://leetcode.com/problems/reverse-linked-list/discuss/1449712/Easy-C%2B%2BJavaPythonJavaScript-Explained%2BAnimated 
  
