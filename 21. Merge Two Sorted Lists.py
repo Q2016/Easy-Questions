@@ -16,6 +16,8 @@ splicing together the nodes of the first two lists. Return the head of the merge
 
 Solution: Recursively
     
+It's curious how the node are linked together, had to do an example on a paper    
+    
 # recursively    
 def mergeTwoLists2(self, l1, l2):
     if not l1 or not l2:
