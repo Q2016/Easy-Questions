@@ -12,7 +12,10 @@ lists have no intersection at all, return null.
 
 
 
-Solution:
+Solution: Samrt Solution
+
+For a good understanding and explanation: 
+    https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!    
     
 # the idea is if you switch head, the possible difference between length would be countered. 
 # On the second traversal, they either hit or miss. 
