@@ -12,7 +12,9 @@ Total time = 2 + 1 + 1 = 4.
 
 
 Solution: Dictionary+One pass
-  
+
+Map values to index and use this fact  
+
 class Solution:
     def calculateTime(self, keyboard: str, word: str) -> int:
         
