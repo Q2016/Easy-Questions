@@ -11,10 +11,17 @@ Explanation: The first pair [1,2] means we have freq = 1 and val = 2 so we gener
 The second pair [3,4] means we have freq = 3 and val = 4 so we generate [4,4,4].
 At the end the concatenation [2] + [4,4,4] is [2,4,4,4].
 
+
+
+
+
 Solution:
 
  def decompressRLElist(self, nums: List[int]) -> List[int]:
         return [nums[i + 1] for i in range(0, len(nums), 2) for _ in range(nums[i])]
+
+  
+  
 which is equivalent to the following:
 
     def decompressRLElist(self, nums: List[int]) -> List[int]:
@@ -23,18 +30,9 @@ which is equivalent to the following:
             for _ in range(nums[i]):
                 ans.append(nums[i + 1])
         return ans 
-or
 
-    def decompressRLElist(self, nums: List[int]) -> List[int]:
-        return [n for i in range(0, len(nums), 2) for n in [nums[i + 1]] * nums[i]]
-which is equivalent to the following:
-
-    def decompressRLElist(self, nums: List[int]) -> List[int]:
-        ans = []
-        for i in range(0, len(nums), 2):
-            for n in [nums[i + 1]] * nums[i]:
-                ans.append(n)  
-        return ans
+       
+       
+       
 Analysis:
-
 Time & space: O(nums[0] + nums[2] + ..,. + nums[2 n - 2]), where n = nums.length.
