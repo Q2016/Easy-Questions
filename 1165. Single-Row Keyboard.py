@@ -15,20 +15,14 @@ Solution: Dictionary+One pass
 
 Map values to index and use this fact  
 
-class Solution:
-    def calculateTime(self, keyboard: str, word: str) -> int:
-        
+    def calculateTime(self, keyboard: str, word: str) -> int:        
         mapping = {}
-        
         for i, c in enumerate(keyboard):
             mapping[c] = i
-        
         total_time = 0
         prev = 0
-        
         for c in word:
             index = mapping[c]            
             total_time += abs(index - prev)            
             prev = index
-            
         return total_time
