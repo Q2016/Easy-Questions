@@ -18,7 +18,10 @@ Output: true
     
     
     
-Solution:One pass + Dic
+Solution:One pass + Dic 
+
+same solution as Two Sum question
+
 def containsNearbyDuplicate(self, nums, k):
     dic = {}
     for i, v in enumerate(nums):
