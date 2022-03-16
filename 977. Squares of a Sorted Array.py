@@ -1,5 +1,6 @@
 Question:
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+Can be solved in O(n).
 
 Example 1:
 Input: nums = [-4,-1,0,3,10]
