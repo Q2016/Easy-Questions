@@ -10,6 +10,7 @@ Given the root of a binary tree, return true if the given tree is uni-valued, or
 
 
 
+
 Solution: Depth-First Search
   
 Let's output all the values of the array. After, we can check that they are all equal.
