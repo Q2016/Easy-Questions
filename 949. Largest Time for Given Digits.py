@@ -10,6 +10,7 @@ Explanation: The valid 24-hour times are "12:34", "12:43", "13:24", "13:42", "14
 Of these times, "23:41" is the latest.
 
 
+
 Solution: Use of itertools.permutations
     
 There are two conditions that we should meet, in order to construct a valid time format:
