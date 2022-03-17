@@ -10,6 +10,7 @@ Explanation: 'a' and 'e' in 'alex' were long pressed.
 
     
 
+    
 Solution: Two pointers (good question)
 
 The idea is to iterate through the typed string, because it's longer, checking against a particular location in name as you go. There are only 
