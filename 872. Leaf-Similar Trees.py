@@ -10,6 +10,7 @@ Return true if and only if the two given trees with head nodes root1 and root2 a
 
 
 
+
 Solution:Depth First Search
 
 Let's find the leaf value sequence for both given trees. Afterwards, we can compare them to see if they are equal or not.
