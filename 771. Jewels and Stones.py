@@ -12,13 +12,14 @@ Output: 3
   
   
 Solution:
-class Solution:
-    def numJewelsInStones(self, J: str, S: str) -> int:
+  
+This solution is wrong:  
+
+    def numJewelsInStones(self, J: str, S: str) -> int:  
     	return sum(i in J for i in S)
 
+Correct solution:
 
-
-class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
     	return sum(S.count(i) for i in J)
 
