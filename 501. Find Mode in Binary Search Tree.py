@@ -33,11 +33,14 @@ class Solution(object):
     def dfs(self, node):
         if not node: return
         self.dfs(node.left)
-        self.current_count = 1 if node.val != self.prev else self.current_count + 1
+        
+        self.current_count = 1 if node.val != self.prev else self.current_count + 1 # condition for increasing the frequency
+        
         if self.current_count == self.max_count:
-            self.result.append(node.val)
+            self.result.append(node.val) # This is the mode
         elif self.current_count > self.max_count:
-            self.result = [node.val]
+            self.result = [node.val] # Throw everything out and assume this is the node
             self.max_count = self.current_count
         self.prev = node.val
+        
         self.dfs(node.right)
