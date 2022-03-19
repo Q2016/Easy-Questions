@@ -14,10 +14,19 @@ The first distinct maximum is 3. The second distinct maximum is 2. The third dis
 
 
 Solution:
-def thirdMax(self, nums):
-        nums = set(nums)
-        if len(nums) < 3:
-            return max(nums)
-        nums.remove(max(nums))
-        nums.remove(max(nums))
-        return max(nums)
+
+Time is O(n)        
+        
+class Solution:
+    def thirdMax(self, nums):
+
+        n1 = n2 = n3 = None
+        for num in nums:
+            if n1 == num or n2 == num or n3 == num: continue
+            if n1 == None or num > n1:
+                n1, n2, n3 = num, n1, n2
+            elif n2 == None or num > n2 :
+                n2, n3 = num, n2
+            elif n3 == None or num > n3:
+                n3 = num
+        return n3 if n3!=None else n1
