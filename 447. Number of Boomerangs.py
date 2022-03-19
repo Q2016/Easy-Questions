@@ -12,7 +12,7 @@ Explanation: The two boomerangs are [[1,0],[0,0],[2,0]] and [[1,0],[2,0],[0,0]].
 Solution:
 
     def numberOfBoomerangs(self, points: List[List[int]]) -> int:
-        def sub_lists(l,m):
+        def sub_lists(l,m): # maybe this can be replaced with itertools.permutation()
             lists = [[]]
             for i in range(len(l) + 1):
                 for j in range(i):
