@@ -17,7 +17,26 @@ Given the root of a binary tree, return all root-to-leaf paths in any order. A l
 
 
 
-Solution:
+Solution: Recursive
+	
+    # dfs recursively
+    def binaryTreePaths(self, root):
+        if not root:
+            return []
+        res = []
+        self.dfs(root, "", res)
+        return res
+    
+    def dfs(self, root, ls, res):
+        if not root.left and not root.right:
+            res.append(ls+str(root.val))
+        if root.left:
+            self.dfs(root.left, ls+str(root.val)+"->", res)
+        if root.right:
+            self.dfs(root.right, ls+str(root.val)+"->", res)	
+	
+	
+	
 # dfs top down + stack
     def binaryTreePaths1(self, root):
         if not root:
@@ -48,21 +67,6 @@ Solution:
                 queue.append((node.right, ls+str(node.val)+"->"))
         return res
         
-    # dfs recursively
-    def binaryTreePaths(self, root):
-        if not root:
-            return []
-        res = []
-        self.dfs(root, "", res)
-        return res
-    
-    def dfs(self, root, ls, res):
-        if not root.left and not root.right:
-            res.append(ls+str(root.val))
-        if root.left:
-            self.dfs(root.left, ls+str(root.val)+"->", res)
-        if root.right:
-            self.dfs(root.right, ls+str(root.val)+"->", res)
 			
     def binaryTreePaths1(self, root):
         return self.dfs(root, "")
