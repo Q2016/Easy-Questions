@@ -16,6 +16,8 @@ Output: true
   
   
 Solution: Dictionary
+
+  Time O(n)
   
 def isAnagram1(self, s, t):
     dic1, dic2 = {}, {}
@@ -32,6 +34,9 @@ def isAnagram2(self, s, t):
     for item in t:
         dic2[ord(item)-ord('a')] += 1
     return dic1 == dic2
+    
+    
+    Time O(log n)
     
 def isAnagram3(self, s, t):
     return sorted(s) == sorted(t)
