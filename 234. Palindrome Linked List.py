@@ -15,7 +15,7 @@ Given the head of a singly linked list, return true if it is a palindrome.
 
 
 
-Solution:
+Solution: Two pointers
 
 This can be solved by reversing the 2nd half and compare the two halves. Let's start with an example [1, 1, 2, 1].
 
@@ -35,35 +35,35 @@ h                      s
 
 1 -> 1    null <- 2 <- 1             
      h            s
-public boolean isPalindrome(ListNode head) {
-    ListNode fast = head, slow = head;
-    while (fast != null && fast.next != null) {
-        fast = fast.next.next;
-        slow = slow.next;
-    }
-    if (fast != null) { // odd nodes: let right half smaller
-        slow = slow.next;
-    }
-    slow = reverse(slow);
-    fast = head;
+          
+          
+def isPalindrome(head) :
+    fast = head 
+    slow = head
+    while (fast != None and fast.next != None): 
+        fast = fast.next.next # double speed
+        slow = slow.next
     
-    while (slow != null) {
-        if (fast.val != slow.val) {
-            return false;
-        }
-        fast = fast.next;
-        slow = slow.next;
-    }
-    return true;
-}
+    if (fast != None) : # odd nodes: let right half smaller
+        slow = slow.next
+    
+    slow = reverse(slow)
+    fast = head
+    
+    while (slow != None) :
+        if (fast.val != slow.val) :
+            return False
+        fast = fast.next
+        slow = slow.next
+    return True
 
-public ListNode reverse(ListNode head) {
-    ListNode prev = null;
-    while (head != null) {
-        ListNode next = head.next;
-        head.next = prev;
-        prev = head;
-        head = next;
-    }
-    return prev;
-}
+
+def reverse(head) :
+    prev = None
+    while (head != None) :
+        next = head.next
+        head.next = prev
+        prev = head
+        head = next
+    return prev
+
