@@ -15,9 +15,13 @@ Example 4:
 Input: num = "1"
 Output: true
 Explanation
-Create a reference mapping for strobo grammatic numbers. Then use the two-pointer technique to check if the numbers from left and right match the mapping.
+Create a reference mapping for strobo grammatic numbers. Then use the two-pointer technique to check if the numbers from 
+left and right match the mapping.
 
-Solution:
+
+
+
+Solution: Two pointers+ Dic
 
 class Solution:
     def isStrobogrammatic(self, num: str) -> bool:
