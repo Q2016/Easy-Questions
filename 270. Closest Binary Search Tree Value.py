@@ -12,17 +12,19 @@ Output: 4
 
 
 
-Solution: !
-    
-    def closestValue(self, root, target):
+Solution: Time O(log n)
+ 
 
-        if root is None:
-            return float('inf')
-        if root.val == target:
-            return root.val
-        elif root.val < target:
-            rightRes = self.closestValue(root.right, target)
-            return root.val if abs(root.val - target) < abs(rightRes - target) else rightRes
-        elif root.val > target:
-            leftRes = self.closestValue(root.left, target)
-            return root.val if abs(root.val - target) < abs(leftRes - target) else leftRes
+    def closestValue(root, target) :
+        return closest(root, target, root.val)
+    
+    def closest(node, target, val) :
+        if (node == None) return val
+        if (math.abs(node.val - target) < math.abs(val - target)): 
+            val = node.val
+        if (node.val < target): 
+            val = closest(node.right, target, val)
+        elif (node.val > target): 
+            val = closest(node.left, target, val);
+        return val;
+     
