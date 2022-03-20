@@ -14,7 +14,7 @@ splicing together the nodes of the first two lists. Return the head of the merge
 
 
 
-Solution: Recursively
+Solution: Recursively or Iteratively
     
 It's curious how the node are linked together, had to do an example on a paper    
     
