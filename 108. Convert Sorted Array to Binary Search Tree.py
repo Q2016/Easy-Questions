@@ -13,7 +13,7 @@ Explanation: [0,-10,5,null,-3,null,9] is also accepted:
         
         
         
-Solution: Recursive (Inorder traversal)
+Solution: BST
 
 
 def sortedArrayToBST(num):
