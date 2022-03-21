@@ -1,6 +1,7 @@
 Question:
 Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] 
 you have to count the number of valid j's such that j != i and nums[j] < nums[i]. Return the answer in an array.
+Range of the given numbers is between 1 and 100.
 
 Example 1:
 Input: nums = [8,1,2,2,3]
@@ -20,7 +21,7 @@ Then just dump it's corresponding index in original nums.
 Time: O(NlogN) #---> because we sort
 Space: O(N) for output list
 
-class Solution:
+
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         indices = {}
         for i, num in enumerate(sorted(nums)):
@@ -31,13 +32,13 @@ class Solution:
     
 
 Soluiton 2
-Refer to this solution of @equ1n0x, we are already told the range of the given numbers is between 1 and 100.
+We are already told the range of the given numbers is between 1 and 100.
 So we can easily count each number and sum their prefix and dump.
 
 Time: O(N) # This solution is without sorting
 Space: O(N) for output list
 
-class Solution:
+
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         count = [0] * 102
         for num in nums:
