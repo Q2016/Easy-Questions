@@ -10,8 +10,12 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 
 
+
+
 Solution: Hashmap
+    
 Map the diff to each index
+
 # https://www.youtube.com/watch?v=KLlXCFG5TnA
 # you can't solve it using two pointer or slidding window
 # my own solution with the hint of hashmap
