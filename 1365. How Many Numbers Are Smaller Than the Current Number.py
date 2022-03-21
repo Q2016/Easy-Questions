@@ -17,7 +17,7 @@ Solution: Dictionary+sort
 Record index in sorted nums if it didn't appear before.
 Then just dump it's corresponding index in original nums.
 
-Time: O(NlogN)
+Time: O(NlogN) #---> because we sort
 Space: O(N) for output list
 
 class Solution:
@@ -34,14 +34,14 @@ Soluiton 2
 Refer to this solution of @equ1n0x, we are already told the range of the given numbers is between 1 and 100.
 So we can easily count each number and sum their prefix and dump.
 
-Time: O(N)
+Time: O(N) # This solution is without sorting
 Space: O(N) for output list
 
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         count = [0] * 102
         for num in nums:
-            count[num+1] += 1
-        for i in range(1, 102):
-            count[i] += count[i-1]
+            count[num+1] += 1 # find frequency of each number
+        for i in range(1, 102): # in a way sorting is indirectly implemented here
+            count[i] += count[i-1] # by this way of counting, we accumulate numbers came before a given number
         return [count[num] for num in nums]
