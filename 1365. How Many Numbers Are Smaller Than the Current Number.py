@@ -13,7 +13,7 @@ For nums[3]=2 there exist one smaller number than it (1).
 For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
 Solution: Dictionary+sort
-Solution 1
+
 Record index in sorted nums if it didn't appear before.
 Then just dump it's corresponding index in original nums.
 
@@ -26,6 +26,10 @@ class Solution:
         for idx, num in enumerate(sorted(nums)):
             indices.setdefault(num, idx)
         return [indices[num] for num in nums]
+
+    
+    
+
 Soluiton 2
 Refer to this solution of @equ1n0x, we are already told the range of the given numbers is between 1 and 100.
 So we can easily count each number and sum their prefix and dump.
