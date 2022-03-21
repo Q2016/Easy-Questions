@@ -23,8 +23,8 @@ Space: O(N) for output list
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         indices = {}
-        for idx, num in enumerate(sorted(nums)):
-            indices.setdefault(num, idx)
+        for i, num in enumerate(sorted(nums)):
+            indices.setdefault(num, i) # Get the value of the "num" item, if the "num" item does not exist, insert "num" with the value "i":
         return [indices[num] for num in nums]
 
     
