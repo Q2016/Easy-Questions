@@ -42,7 +42,8 @@ We come up with the following code:
 
 	def maxProfit(prices) :
 		i = 0, 
-		buy, sell, profit = 0, N = len(prices) - 1
+		buy, sell, profit = 0,0,0 
+		N = len(prices) - 1
 		while (i < N):
 		    while (i < N and prices[i + 1] <= prices[i]) i++
 		    buy = prices[i]
