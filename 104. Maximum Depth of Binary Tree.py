@@ -14,7 +14,9 @@ from the root node down to the farthest leaf node.
 
 
 Solution: Recursive
-Recursive
+    
+Trick is to assume depth 0 at a not that satisfies (Not node==True) and recursivly go up the tree.    
+    
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
@@ -22,6 +24,7 @@ class Solution:
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
    
+
 
 Iterative
 from collections import deque
