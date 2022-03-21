@@ -10,7 +10,7 @@ Input: arr = [10,2,5,3]
 Output: true
 Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
 
-Solution:
+Solution: set
 
     def checkIfExist(self, arr: List[int]) -> bool:
         seen = set()
