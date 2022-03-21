@@ -10,6 +10,8 @@ arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 
 
 
+
+
 Solution:One Pass (This is question 852 i.e. repetitative)
 
 If we walk along the mountain from left to right, we have to move strictly up, then strictly down.
