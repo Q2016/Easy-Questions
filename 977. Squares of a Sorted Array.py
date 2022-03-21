@@ -12,7 +12,8 @@ After sorting, it becomes [0,1,9,16,100].
 
 
 
-Solution: Two pointers
+Solution: Two pointers (Crazy!)
+    
 The question boils down to understanding that if we look at the magnitude of the elements in the array at both ends and gradually 
 "slide down" and converge towards the center of the array. With that understanding, we can use two pointers, one at each end, 
 to iteratively collect the larger square to a list. However, collecting the larger square in a list with list's append, results 
