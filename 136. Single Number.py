@@ -20,11 +20,14 @@ Solution: Dictionary
 def singleNumber1(self, nums):
     dic = {}
     for num in nums:
-        dic[num] = dic.get(num, 0)+1
+        dic[num] = dic.get(num, 0)+1 #The get() method returns the value of the item with the specified key. 
+                                        #"0" is a value to return if the specified key does not exist.
     for key, val in dic.items():
         if val == 1:
             return key
 
+        
+        
 def singleNumber2(self, nums):
     res = 0
     for num in nums:
