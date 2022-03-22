@@ -14,7 +14,7 @@ Thus, the maximum distance to the closest person is 2.
 
 
 
-Solution: One pass
+Solution: One pass (I think this solution has some issues, we dont need *** below)
 How to find the max distance between two 1s. 
 
     def maxDistToClosest(seats) :
@@ -22,7 +22,7 @@ How to find the max distance between two 1s.
         beginning = 0 
         i = 0
         # count zeros in beginning
-        while (seats[i]==0):
+        while (seats[i]==0): # ***
             beginning++
             i++
         # find longest sequence of zeros in middle
