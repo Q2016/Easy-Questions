@@ -14,7 +14,7 @@ Explanation: The next greater element for each value of nums1 is as follows:
 - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
 
 
-Solution:
+Solution: (???)
 Basically the problem says, if in nums1 we are working on 4, then in nums2 first find where is 4 and from that index find the next number 
 greater than 4 in nums2. We can see that the solution is always coming from the reverse side of the list nums2. This should tell us to use stack.
 We traverse nums2 and start storing elements on the top of stack. If current number is greater than the top of the stack, then we found a pair. 
