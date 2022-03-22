@@ -10,6 +10,8 @@ Given the root of a Binary Search Tree (BST), return the minimum difference betw
 
 
 
+
+
 Solution: Inorder traversal~sorted array
 	
 The idea is to use an in-order traversal and find the difference between the current node and the node previously checked.
