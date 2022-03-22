@@ -13,6 +13,8 @@ Explanation: 6 is the largest integer. For every other number in the array x, 6 
 
 
 Solution: Trick: save highest and second highest
+The question says "whether the largest element in the array is at least 
+twice as much as every other number in the array" that's why we need the second highest               
         
 Just iterate through the array and note the highest and second highest numbers. Might as well take note of the index at the same time.
 One slightly clever idea was to shuffle the highest to the second-highest whenever a new highest was found. That was a way to handle the 
