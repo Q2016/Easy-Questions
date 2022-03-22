@@ -12,6 +12,9 @@ Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accep
     
     
 Solution: Teaching how to use alt-sort in python
+    
+Below is a O(nlog n) solution but it can be solved in O(n) as well.    
+    
 class Solution(object):
     def sortArrayByParity(self, A):
         A.sort(key = lambda x: x % 2)
