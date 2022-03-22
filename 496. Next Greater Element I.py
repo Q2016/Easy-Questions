@@ -23,17 +23,16 @@ Eventually when there are no more elements in nums2 to traverse, but there are e
 found for them. Hence we'll put -1 for the remaining elements in stack.
 
 
-def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        d = {}
-        st = []
-        ans = []
-        
-        for x in nums:
-            while len(st) and st[-1] < x:
-                d[st.pop()] = x
-            st.append(x)
-
-        for x in findNums:
-            ans.append(d.get(x, -1))
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        greater_map = {x : -1 for x in nums1} 
+        stack = []
+		
+        for num in nums2:
+            while stack and stack[-1] < num:
+                prev_num = stack.pop()
+                if prev_num in greater_map:
+                    greater_map[prev_num] = num
+            stack.append(num)
             
-        return ans
+        return [greater_map[x] for x in nums1]
