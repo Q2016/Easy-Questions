@@ -10,7 +10,7 @@ Output: [5,6]
     
     
     
-    
+The case for finding one missing number uses sum trick.
     
     
     
