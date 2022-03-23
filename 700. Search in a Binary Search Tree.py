@@ -18,3 +18,15 @@ class Solution:
         if root and val < root.val: return self.searchBST(root.left, val)
         elif root and val > root.val: return self.searchBST(root.right, val)
         return root
+    
+
+Similarity to 530. Minimum Absolute Difference in BST:    
+    
+  def getMinimumDifference(self, root):
+        L = []
+        def dfs(node):
+            if node.left: dfs(node.left)
+            L.append(node.val)
+            if node.right: dfs(node.right)
+        dfs(root)
+        return min(b - a for a, b in zip(L, L[1:]))
