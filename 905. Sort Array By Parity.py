@@ -19,3 +19,13 @@ class Solution(object):
     def sortArrayByParity(self, A):
         A.sort(key = lambda x: x % 2)
         return A
+    
+    
+Solution from 283. Move Zeroes is an O(n):
+
+def moveZeroes(self, nums):
+    zero = 0  # records the position of "0"
+    for i in xrange(len(nums)):
+        if nums[i] != 0:
+            nums[i], nums[zero] = nums[zero], nums[i]
+            zero += 1
