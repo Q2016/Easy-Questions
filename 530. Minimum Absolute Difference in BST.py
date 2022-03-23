@@ -27,3 +27,12 @@ Note: There are at least two nodes in this BST.
             if node.right: dfs(node.right)
         dfs(root)
         return min(b - a for a, b in zip(L, L[1:]))
+
+
+Similarity to 700. Search in a Binary Search Tree:
+    
+class Solution:
+    def searchBST(self, root, val):
+        if root and val < root.val: return self.searchBST(root.left, val)
+        elif root and val > root.val: return self.searchBST(root.right, val)
+        return root
