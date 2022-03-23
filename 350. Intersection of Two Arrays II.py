@@ -17,7 +17,7 @@ Output: [2,2]
     
     
     
-Solution: Two pointers or Counter
+Solution: Two pointers or Counter (Go to the last question)
 
 
     def intersect(self, nums1, nums2):
@@ -56,10 +56,10 @@ or use dictionary to count:
 and use Counter to make it cleaner:
 
     def intersect(self, nums1, nums2):
-        counts = collections.Counter(nums1)
+        counts = collections.Counter(nums1) # find the frequency of all numbers in nums1
         res = []
-        for num in nums2:
-            if counts[num] > 0:
-                res.append(num)
-                counts[num] -= 1
+        for i in nums2:
+            if counts[i] > 0: # if the number is in the other array, add it and reduce the frequency by -1
+                res.append(i)
+                counts[i] -= 1
         return res
