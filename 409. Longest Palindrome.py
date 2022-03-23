@@ -13,7 +13,7 @@ One longest palindrome that can be built is "dccaccd", whose length is 7.
 
 
 
-Solution: Greedy (Do you understand this?)
+Solution: Greedy
   
 A palindrome consists of letters with equal partners, plus possibly a unique center (without a partner). The letter i from the left 
 has its partner i from the right. For example in 'abcba', 'aa' and 'bb' are partners, and 'c' is a unique center.
