@@ -32,7 +32,7 @@ been seen as a multiple of a previous iteration. We just have to update our coun
         res = [True] * n
         res[0] = res[1] = False # 0 and 1 are not prime
         for i in range(2, n):
-            if res[i] == True: # if 'i' is a prime, search from i to i^2 
+            if res[i] == True: # if 'i' is a prime, search from i to n^2 
                 for j in range(i, int((n-1)/i+1)): # look at the index below, (n-1)/i+1 is fixed by num^2 condition mentioned above
                     res[i*j] = False
         return sum(res)
