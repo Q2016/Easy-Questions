@@ -12,33 +12,28 @@ lists have no intersection at all, return null.
 
 
 
-Solution: Samrt Solution
+
+
+Solution: (Smart Solution)
 
 For a good understanding and explanation: 
     https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!    
+        
     
-# the idea is if you switch head, the possible difference between length would be countered. 
-# On the second traversal, they either hit or miss. 
-# if they meet, pa or pb would be the node we are looking for, 
-# if they didn't meet, they will hit the end at the same iteration, pa == pb == None, return either one of them is the same,None    
-    
-    
-class Solution:
-    # @param two ListNodes
-    # @return the intersected ListNode
+
     def getIntersectionNode(self, headA, headB):
         if headA is None or headB is None:
             return None
 
-        pa = headA # 2 pointers
-        pb = headB
+        node_a = headA 
+        node_b = headB
 
-        while pa is not pb:
+        while node_a is not node_b:
             # if either pointer hits the end, switch head and continue the second traversal, 
             # if not hit the end, just move on to next
-            pa = headB if pa is None else pa.next
-            pb = headA if pb is None else pb.next
+            node_a = headB if node_a is None else node_a.next
+            node_b = headA if node_b is None else node_b.next
 
-        return pa # only 2 ways to get out of the loop, they meet or the both hit the end=None
+        return node_b # only 2 ways to get out of the loop, they meet or the both hit the end=None
 
 
