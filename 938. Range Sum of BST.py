@@ -25,6 +25,27 @@ Method 1:
             return self.rangeSumBST(root.left, L, R)
         return root.val + self.rangeSumBST(root.left, L, R) + self.rangeSumBST(root.right, L, R)
 
+ 
+solution from 669. Trim a Binary Search Tree:
+        def trimBST(self, root, low, high):
+
+        def trim(node):
+            if not node:
+                return None
+            elif node.val > high:
+                return trim(node.left)
+            elif node.val < low:
+                return trim(node.right)
+            else:
+                node.left = trim(node.left)
+                node.right = trim(node.right)
+                return node
+
+        return trim(root)
+    
+    
+    
+    
 The following are two more similar recursive codes.
 
 Method 2:
