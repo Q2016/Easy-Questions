@@ -17,16 +17,16 @@ Solution:
 
 Time is O(n)        
         
-class Solution:
     def thirdMax(self, nums):
 
         n1 = n2 = n3 = None
-        for num in nums:
-            if n1 == num or n2 == num or n3 == num: continue
-            if n1 == None or num > n1:
-                n1, n2, n3 = num, n1, n2
-            elif n2 == None or num > n2 :
-                n2, n3 = num, n2
-            elif n3 == None or num > n3:
-                n3 = num
+        for i in nums:
+            if n1 == i or n2 == i or n3 == i: # one of the maxes is obtained
+                continue 
+            if n1 == None or i > n1: # substitute for the first max 
+                n1, n2, n3 = i, n1, n2
+            elif n2 == None or i > n2 : # substitute for the second max
+                n2, n3 = i, n2
+            elif n3 == None or i > n3: # substitute for the third max
+                n3 = i
         return n3 if n3!=None else n1
