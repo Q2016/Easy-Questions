@@ -30,3 +30,34 @@ class Solution:
             m+=1
             n=squar(n)     
         return True if n==1 else False
+    
+There are 2 parts to the algorithm we'll need to design and code.
+1)Given a number nn, what is its next number?
+2)Follow a chain of numbers and detect if we've entered a cycle.
+Part 1: can be done by using the division and modulus operators to repeatedly take digits off the number until none remain, 
+and then squaring each removed digit and adding them together. 
+Part 2: can be done using a HashSet. Each time we generate the next number in the chain, we check if it's already in our HashSet.
+If it is not in the HashSet, we should add it.
+If it is in the HashSet, that means we're in a cycle and so should return false.
+
+**The reason we use a HashSet and not a Vector, List, or Array is because we're repeatedly checking whether or not numbers are in it. 
+Checking if a number is in a HashSet takes O(1) time, whereas for the other data structures it takes O(n) time. Choosing the correct 
+data structures is an essential part of solving these problems.
+    
+    
+    
+def isHappy(self, n: int) -> bool:
+
+    def get_next(n):
+        total_sum = 0
+        while n > 0:
+            n, digit = divmod(n, 10)
+            total_sum += digit ** 2
+        return total_sum
+
+    seen = set()
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = get_next(n)
+
+    return n == 1    
