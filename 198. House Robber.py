@@ -33,7 +33,7 @@ class Solution:
 Time Complexity:
 If we add memoization like the code below, will be Time O(n) and Space O(n)    
 
-Recursive + memo (top-down).
+Recursive + memo (top-down):
 
 int[] memo;
 public int rob(int[] nums) {
@@ -53,3 +53,30 @@ private int rob(int[] nums, int i) {
     memo[i] = result;
     return result;
 }
+
+
+Best Solution:
+
+At each house there are two options: either to rob it or not to rob it.
+
+Option 1: If rob, then rob = not_rob + nums[i]
+(max money if rob the current house = max money if not rob the last house + amount of the current house)
+Option 2: If not rob, then not_rob = max(rob, not_rob)
+(max money if not rob the current house = max money at the last house, either rob or not rob)
+
+Varibles: rob = max money if rob the current house
+not_rob = max money if not rob the current house.
+Both variables are initially set to 0
+
+Complexity:
+time = O(n)
+Space = O(1)
+
+Here is the code:
+
+class Solution(object):
+    def rob(self, nums):
+        rob, not_rob = 0, 0
+        for num in nums:
+            rob, not_rob = not_rob + num, max(rob, not_rob)
+        return max(rob, not_rob)
