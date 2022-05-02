@@ -14,7 +14,7 @@ a binary tree in which the left and right subtrees of every node differ in heigh
 
 
 Solution: Recursive
-Trick is to use max depth for this problem
+Trick is to use max depth for this problem, maxdepth is done in 104
 
 class Solution:
     result = True;
