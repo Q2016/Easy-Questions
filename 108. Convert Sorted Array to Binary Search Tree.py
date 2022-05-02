@@ -15,7 +15,8 @@ Explanation: [0,-10,5,null,-3,null,9] is also accepted:
         
 Solution: BST
 
-
+The conversion will always be balanced
+        
 def sortedArrayToBST(num):
     if (len(num) == 0):
         return None
