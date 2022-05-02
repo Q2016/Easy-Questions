@@ -13,7 +13,7 @@ Explanation: We can use 34 and 24 to sum 58 which is less than 60.
     
     
 Solution: Two pointers
-Sorted and then use two pointers technique.
+Sorted and then use two pointers technique. If sorted then complexity is not O(N)!
 
 class Solution:
     def twoSumLessThanK(self, nums: List[int], k: int) -> int:
