@@ -27,7 +27,7 @@ This link solves all Best Time to Buy Stocks using DP:
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/900051/Fully-explained-all-buy-and-sell-problems-C%2B%2B-oror-Recursive-oror-Memoization-oror-Minor-difference	
 
 
-Below is the Greedy solution:
+Below is the Greedy solution: Complexity O(N^2)?
 
 The profit is the sum of sub-profits. Each sub-profit is the difference between selling at day j, and buying at day i (with j > i). The range [i, j] 
 should be chosen so that the sub-profit is maximum: sub-profit = prices[j] - prices[i]
