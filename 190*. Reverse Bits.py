@@ -26,6 +26,10 @@ out = 010110, n = 11
 out = 0101101, n = 1
 out = 01011011, n = 0
 
+(out << 1) multiplies out by 2
+(n & 1) returns 1 if both last bits are 1
+0^1 = 1
+
 class Solution:
     def reverseBits(self, n):
         out = 0
