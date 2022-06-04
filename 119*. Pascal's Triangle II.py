@@ -6,8 +6,18 @@ Example 1:
 Input: rowIndex = 3
 Output: [1,3,3,1]
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-Solution: (didnt understand it)
+Solution: (staright forward)
 class Solution(object):
     def getRow(self, rowIndex):
 
