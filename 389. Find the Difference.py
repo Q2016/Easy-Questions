@@ -8,21 +8,24 @@ Output: "e"
 Explanation: 'e' is the letter that was added.
 
     
-Solution: BITWISE
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+Solution: 
+    
+https://www.youtube.com/watch?v=sRwElQ_TOr8  
 
-Let's use BITWISE method to solve this problem
-So, using XOR concept we will get our additional character, understand it visually :-
-Here also let's say our character are:
-s = abc
-t = cabx
-If we take XOR of every character. all the n character of s "abc" is similar to n character of t "cab". So, they will cancel each other. 
-And we left with our answer.
-s =   abc
-t =   cbax
-------------
-ans -> x
------------
-
+If both bits are the same, the XOR operator outputs 0. 
+If both bits are different, the XOR operator outputs 1. 
+    
+    
     def findTheDifference(self, s: str, t: str) -> str:
         c = 0
         for cs in s: c ^= ord(cs) #ord is ASCII value
