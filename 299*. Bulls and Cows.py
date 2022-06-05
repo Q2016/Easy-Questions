@@ -16,34 +16,31 @@ Explanation: Bulls are connected with a '|' and cows are underlined:
   |
 "7810"
 
+
+
+
+
+
+
+
+
+
+
+
+
 Solution:
 class Solution:
     def getHint(self, secret: str, guess: str) -> str:
-        
-        secret=list(secret)
-        guess=list(guess)
-        
         bulls=0
-        n=0 # index of array
-        for i,j in zip(secret, guess):
-            if i==j:
-                bulls+=1
-                secret.pop(n)
-                guess.pop(n)
-            
-            n+=1
-            
-        cnt_s=Counter(secret)
-        cnt_g=Counter(guess)
+        bucket=[0]*10
         
-        myset1=set()
-        for i,_ in cnt_s.items(): 
-            myset1.add(i)
-                
-        myset2=set()
-        for i,_ in cnt_g.items(): 
-            myset2.add(i)
+        for s, g in zip(secret, guess):
+          if s==g:
+            bulls +=1
+          else:
+            bucket[int(s)]+=1
+            bucket[int(g)]-=1
             
-        m=len(myset1.intersection(myset2))
+        return f'{bulls}A{len(secret)-bulls-sum(x for x in bucket if x>0)}B'
         
-        return str(bulls)+"A"+str(m)+"B"
+        
