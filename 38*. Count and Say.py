@@ -16,10 +16,34 @@ countAndSay(3) = say "11" = two 1's = "21"
 countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
 
 
-Solution: Groupby 
+
+
+
+
+
+
+
+
+
+
+
+Solution: 
+    
+https://www.youtube.com/watch?v=e2HDQM5Q2r4    
     
 def countAndSay(self, n):
-    s = '1'
-    for _ in range(n - 1):
-        s = ''.join(str(len(list(group))) + digit for digit, group in itertools.groupby(s))
-    return s
+    
+    if n==1:
+        return "1"
+    
+    prev=self.countAndSay(n-1)
+    res=""
+    ct=1
+    for i in range(len(prev)):
+        if i==len(prev)-1 or prev[i] !=prev[i+1]:
+            res +=str(ct)+prev[i]
+            ct=1
+        else:
+            ct+=1
+            
+    return res
