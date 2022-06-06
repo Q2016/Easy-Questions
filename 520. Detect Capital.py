@@ -9,6 +9,15 @@ Example 1:
 Input: word = "USA"
 Output: true
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution: Regex
 Hey, if we want to do pattern matching, why don't we use Regular Expression (Regex)? Regex is a great way to match a given pattern to a string.
 The pattern of case 1 in regex is [A-Z]*, where [A-Z] matches one char from 'A' to 'Z', *∗ represents repeat the pattern before it at 
