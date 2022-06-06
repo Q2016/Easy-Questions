@@ -17,6 +17,15 @@ klmnopqrst  // 100 pixels wide
 uvwxyz      // 60 pixels wide
 There are a total of 3 lines, and the last line is 60 pixels wide.
 
+
+
+
+
+
+
+
+
+
 Solution:
 We can write out each character in the string S one by one.
 As we write characters, we can update (lines, width) that keeps track of how many lines we have used, and what is the length of the 
