@@ -4,7 +4,8 @@ International Morse Code defines a standard encoding where each letter is mapped
 'b' maps to "-...",
 'c' maps to "-.-.", and so on.
 For convenience, the full table for the 26 letters of the English alphabet is given below:
-[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.",
+ "--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
 Given an array of strings words where each word can be written as a concatenation of the Morse code of each letter.
 
 For example, "cab" can be written as "-.-..--...", which is the concatenation of "-.-.", ".-", and "-...". We will call such a 
@@ -20,8 +21,18 @@ Explanation: The transformation of each word is:
 "msg" -> "--...--."
 There are 2 different transformations: "--...-." and "--...--.".
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-Solution: Hash Set
+Solution: Set
 We can transform each word into it's Morse Code representation.
 After, we put all transformations into a set seen, and return the size of the set.
 
@@ -32,7 +43,14 @@ class Solution(object):
                  "---",".--.","--.-",".-.","...","-","..-",
                  "...-",".--","-..-","-.--","--.."]
 
-        seen = {"".join(MORSE[ord(c) - ord('a')] for c in word)
-                for word in words}
+        seen = {"".join(MORSE[ord(c) - ord('a')] for c in word) for word in words}
 
         return len(seen)
+    
+    
+    
+Complexity Analysis
+
+Time Complexity: O(S), where SS is the sum of the lengths of words in words. We iterate through each character of each word in words.
+
+Space Complexity: O(S).    
