@@ -15,15 +15,21 @@ This is the highest among any shorthand color.
 Example 2:
 Input: color = "#4e3fe1"
 Output: "#5544dd"
-Constraints:
 
-color.length == 7
-color[0] == '#'
-color[i] is either digit or character in the range ['a', 'f'] for i > 0.
-Explanation
-Since we only need to find the closest colors with shorthand, we can list out all shorthand hex codes and find out the closest hex code combination to the given color.
+
+
+
+
+
+
+
+
+
 
 Solution:
+    
+Since we only need to find the closest colors with shorthand, we can list out all shorthand hex codes 
+and find out the closest hex code combination to the given color.
 
 class Solution:
     def similarRGB(self, color: str) -> str:
