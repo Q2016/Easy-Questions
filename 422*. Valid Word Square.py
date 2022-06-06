@@ -13,6 +13,14 @@ The 4th row and 4th column both read "dtye".
 Therefore, it is a valid word square.
 
 
+
+
+
+
+
+
+
+
 Solution:
 Check if words[i][j] == words[j][i] and if the lengthes of columns and rows match.
 
