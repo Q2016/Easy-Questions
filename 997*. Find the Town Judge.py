@@ -11,31 +11,26 @@ Example 1:
 Input: n = 2, trust = [[1,2]]
 Output: 2
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 Solution:
+	
 Given constraints are
 1. The judge believes no one.
 2. Everybody believes judge.
 so, from these two points, we can say that if any person is trusted by N - 1 persons 
 and the same person believes no one, then we can say that he is a judge.
 
-Now, let's do this in program.
-1. Create an array of Size N + 1 to represent each person.
-   arr[i] represents trust score of i th person
-   and arr[i] = number of persons trusts him - number of 
-   persons he trusts.
-2. Now, traverse through given array. 
-    a, b = a trusts b.
-    if a person trusts others,
-	then decrease his score by 1. i.e, arr[a]--
-    if a person is trusted by others, 
-    then increase his score by 1. i.e, arr[b]++
-3. At last traverse through each person,
-    if anyone found with N - 1 trusts,
-	then return his index.
-4. if not found, return -1
-
-IF YOU HAVE ANY DOUBTS, FEEL FREE TO ASK
-IF YOU UNDERSTAND, DON'T FORGET TO UPVOTE.
+https://www.youtube.com/watch?v=2AdzmA1IC1k
    
 time:- O(N)
 space:- O(N)
