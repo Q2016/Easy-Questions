@@ -7,9 +7,18 @@ Output: true
 Explanation: It is the substring "ab" twice.
 
     
-Solution: Hashing
-class Solution:
-    def repeatedSubstringPattern(self, s: str) -> bool:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+Solution: 
+
         
 Basic idea:
 
