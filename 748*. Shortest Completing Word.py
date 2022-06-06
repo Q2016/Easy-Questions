@@ -16,6 +16,16 @@ Explanation: licensePlate contains letters 's', 'p', 's' (ignoring case), and 't
 "stepple" is missing an 's'.
 Since "steps" is the only word containing all the letters, that is the answer.
 
+
+
+
+
+
+
+
+
+
+
 Solution:
 class Solution:
     def shortestCompletingWord(self, lp, words):
