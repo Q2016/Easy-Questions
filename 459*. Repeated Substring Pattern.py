@@ -11,15 +11,19 @@ Solution: Hashing
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
         
-        if len(s)==1:
+Basic idea:
+
+First char of input string is first char of repeated substring
+Last char of input string is last char of repeated substring
+Let S1 = S + S (where S in input string)
+Remove 1 and last char of S1. Let this be S2
+If S exists in S2 then return true else false
+Let i be index in S2 where S starts then repeated substring length i + 1 and repeated substring S[0: i+1]
+
+def repeatedSubstringPattern(self, str):
+
+        if not str:
             return False
-        cnt=Counter(s)
-        frequencies = list(cnt.values())
-        f=math.gcd(*frequencies)
-        if f==1:
-            return False
-        part=len(s)//f
-        for i in range(f-1):
-            if s[0+i*part:part+i*part]!=s[0+(i+1)*part:part+(i+1)*part]:
-                return False
-        return True
+            
+        ss = (str + str)[1:-1]
+        return ss.find(str) != -1
