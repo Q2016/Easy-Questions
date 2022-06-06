@@ -8,19 +8,44 @@ Input: num1 = "11", num2 = "123"
 Output: "134"
 
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
 Solution:  
+  
+https://www.youtube.com/watch?v=_Qp-CTzat50  
+  
 
 class Solution(object):
     def addStrings(self, num1, num2):
 
+        i=len(num1)
+        j=len(num2)
+      
         num1, num2 = list(num1), list(num2)
-        carry, res = 0, []
-        while len(num2) > 0 or len(num1) > 0:
-            n1 = ord(num1.pop())-ord('0') if len(num1) > 0 else 0
-            n2 = ord(num2.pop())-ord('0') if len(num2) > 0 else 0
+        carry=0
+        result =[]
+        
+        while  i>= 0 or j >= 0:
+            sum=carry
+            if i>=0:
+              i-=1
+              sum += ord(num1[i])-ord('0')            
             
-            temp = n1 + n2 + carry 
-            res.append(temp % 10)
-            carry = temp // 10
-        if carry: res.append(carry)
+            if j>=0:
+              j-=1
+              sum += ord(num2[j])-ord('0') 
+ 
+            result.append(sum % 10)
+            carry = sum // 10
+    
+        if carry !=0: 
+          result.append(carry)
+          
         return ''.join([str(i) for i in res])[::-1]
