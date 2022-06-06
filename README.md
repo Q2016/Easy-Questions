@@ -1,14 +1,10 @@
 # Easy-Questions
 
-Questions not clear:
-26, 38, 415, 422, 482, 748, 758, 800, 804, 811, 819, 821, 705, 929, 997
-
 Solution not clear:
-459, 917, 1237
+1237
 
 Design:
 604, 705, 706, 716
-
 
 Regix:
 520
