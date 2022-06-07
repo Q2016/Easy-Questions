@@ -13,7 +13,15 @@ The input string is "(()())(())", with primitive decomposition "(()())" + "(())"
 After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 
 
-Solution:
+
+
+
+
+
+
+
+Solution: Two-pointers
+	
 def removeOuterParentheses(self, S):
 	res = []
 	balance = 0
