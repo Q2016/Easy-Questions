@@ -11,6 +11,13 @@ Explanation: The index moves from 0 to 2 to write 'c' then to 1 to write 'b' the
 Total time = 2 + 1 + 1 = 4. 
 
 
+
+
+
+
+
+
+
 Solution: Dictionary+One pass
 
 Map values to index and use this fact  
