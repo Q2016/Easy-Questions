@@ -10,6 +10,14 @@ Input: queries = ["cbd"], words = ["zaaaz"]
 Output: [1]
 Explanation: On the first query we have f("cbd") = 1, f("zaaaz") = 3 so f("cbd") < f("zaaaz").
   
+  
+  
+  
+  
+  
+  
+  
+  
 Solution:
 class Solution:
     def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:
