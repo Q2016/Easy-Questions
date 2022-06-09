@@ -17,7 +17,7 @@ Explanation: It is the substring "ab" twice.
     
     
     
-Solution: 
+Solution: (is this correct?,if i want to find, then I can just see if it's in the string!)
 
         
 Basic idea:
