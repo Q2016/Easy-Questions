@@ -4,7 +4,7 @@ Solution not clear:
 1237
 
 Design:
-604, 705, 706, 716
+604, 705, 706, 716, 155
 
 Regix:
 520
