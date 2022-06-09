@@ -13,7 +13,13 @@ Input
 Output
 [null, 1, -1, -3]
 
-Solution:
+
+
+
+
+
+Solution: Cumulative sum
+ 
 class NumArray(object):
     def __init__(self, nums):
         self.dp = nums
