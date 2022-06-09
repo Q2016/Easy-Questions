@@ -27,7 +27,7 @@ countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
 
 
 
-Solution: 
+Solution:  Recursive
     
 https://www.youtube.com/watch?v=e2HDQM5Q2r4    
     
