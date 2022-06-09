@@ -14,6 +14,10 @@ left = "0111" and right = "01", score = 1 + 1 = 2
 left = "01110" and right = "1", score = 2 + 1 = 3
 
 
+
+
+
+
 Solution: One pass
 Step 1: In the first 2 lines of code, calculate the number of 0s in the left substring ("0") and the number of 1s in the right 
 substring ("0010"). Thus, we start with zeros = 1 and ones = 1.
