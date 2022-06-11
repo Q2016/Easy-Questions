@@ -57,15 +57,18 @@ Monotonic stack technique
 
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        greater_dic = {x : -1 for x in nums1} 
-        stack = []
+	nums1Idx={n:i for i,n in enumerate(nums1)}
+	res=[-1]*len(nums1)
+	
+	stack=[]
+	for i in range(len(nums2)):
+		cur=num2[i]
+		while stack and cur>stack[-1]:
+			val=stack.pop()
+			idx=num1Idx[val]
+			res[idx]=cur
+		if cur in num1Idx:
+			stack.append(cur)
 		
-        for num in nums2:
-            while stack and stack[-1] < num:
-                prev_num = stack.pop()
-                if prev_num in greater_dic:
-                    greater_dic[prev_num] = num
-            stack.append(num)
-            
-        return [greater_map[x] for x in nums1]
-
+Time O(m+n)
+Space O(m)
