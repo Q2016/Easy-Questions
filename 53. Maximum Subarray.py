@@ -35,3 +35,8 @@ class Solution:
             curSum+=n
             maxSub=max(maxSub, curSum)
         return maxSub
+
+    
+    
+Time O(n)
+Space O(1)
