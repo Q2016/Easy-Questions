@@ -11,6 +11,16 @@ Input: s = "abbxxxxzzy"
 Output: [[3,6]]
 Explanation: "xxxx" is the only large group with start index 3 and end index 6.
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Solution: Two Pointer
 We scan through the string to identify the start and end of each group. If the size of the group is at least 3, we add it to the answer.
 Maintain pointers i, j with i <= j. The i pointer will represent the start of the current group, and we will increment j forward until it 
