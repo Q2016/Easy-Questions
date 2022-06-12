@@ -11,7 +11,14 @@ Output: 3
   
   
   
-Solution:
+  
+  
+  
+  
+  
+  
+  
+Solution: Counter
   
 This solution is wrong:  
 
