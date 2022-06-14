@@ -36,8 +36,8 @@ class Solution:
     else:
       return False
     
-Time: O(b) 
-Space: O(log n)    
+Time: O(n) # just visiting every element of the tree
+Space: O(n) # space complexity of the stack    
     
     
     
