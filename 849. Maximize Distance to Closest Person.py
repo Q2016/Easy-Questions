@@ -14,6 +14,12 @@ Thus, the maximum distance to the closest person is 2.
 
 
 
+
+
+
+
+
+
 Solution: Approach #1: Next Array [Accepted]
 Intuition
 
@@ -80,3 +86,10 @@ class Solution(object):
                 ans = max(ans, min(left, right))
 
         return ans
+
+    
+Complexity Analysis
+
+Time Complexity: O(N), where N is the length of seats.
+
+Space Complexity: O(1).    
