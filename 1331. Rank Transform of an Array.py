@@ -11,13 +11,24 @@ Output: [4,1,2,3]
 Explanation: 40 is the largest element. 10 is the smallest. 20 is the second smallest. 30 is the third smallest.
 
  
+
+ 
+ 
+ 
+ 
  
 Solution: Dic mapping (in a way educational)
  
-Remove duplicates with set, then sort, then build a dict mapping values to ranks, then use that dict on the given list.
+-Remove duplicates with set
+-then sort, 
+-then build a dict 
+-map dic to the given array
 
-Time: O(n log n)
-Space: O(n)
 
-def arrayRankTransform(self, A):
-    return map({a: i+1 for i, a in enumerate(sorted(set(A)))}.get, A)
+
+
+Time: O(NlogN) #because of sorted
+Space: O(N)
+
+def arrayRankTransform(self, arr):
+    return map({a: i+1 for i, a in enumerate(sorted(set(arr)))}.get, arr)
