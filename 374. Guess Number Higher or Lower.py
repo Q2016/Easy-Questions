@@ -12,6 +12,12 @@ Example 1:
 Input: n = 10, pick = 6
 Output: 6
 
+    
+    
+    
+    
+    
+    
 Solution:BS
 # The guess API is already defined for you.
 # @param num, your guess
