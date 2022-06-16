@@ -25,16 +25,16 @@ class MovingAverage:
         """
         Initialize your data structure here.
         """
-        self.queue = collections.deque()
+        self.dq = collections.deque()
         self.size = size
 
     def next(self, val: int) -> float:
-        if len(self.queue) == self.size:
-            self.queue.popleft()
-            self.queue.append(val)
+        if len(self.dq) == self.size:
+            self.dq.popleft()
+            self.dq.append(val)
         else:
-            self.queue.append(val)
-        return sum(self.queue)/len(self.queue)
+            self.dq.append(val)
+        return sum(self.dq)/len(self.dq)
 
       
       
