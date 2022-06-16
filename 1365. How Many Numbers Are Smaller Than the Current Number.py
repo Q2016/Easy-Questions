@@ -13,6 +13,12 @@ For nums[2]=2 there exist one smaller number than it (1).
 For nums[3]=2 there exist one smaller number than it (1). 
 For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
+
+
+
+
+
+
 Solution: Dictionary+sort (I like both of the solutions)
     
 Very similar to 1331
