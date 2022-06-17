@@ -24,9 +24,7 @@ We can use a function dfs to perform a floodfill on a target pixel.
 
 
     def floodFill(self, image, sr, sc, newColor):
-        R, C = len(image), len(image[0])
-        color = image[sr][sc]
-        if color == newColor: return image
+        
         def dfs(r, c):
             if image[r][c] == color:
                 image[r][c] = newColor
@@ -34,6 +32,10 @@ We can use a function dfs to perform a floodfill on a target pixel.
                 if r+1 < R: dfs(r+1, c)
                 if c >= 1: dfs(r, c-1)
                 if c+1 < C: dfs(r, c+1)
-
+      
+        R, C = len(image), len(image[0])
+        color = image[sr][sc]
+        if color == newColor: return image
         dfs(sr, sc)
+        
         return image
