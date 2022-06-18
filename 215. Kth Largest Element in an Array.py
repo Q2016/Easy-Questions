@@ -11,7 +11,7 @@ Output: 5
   
   
   
-Solution:
+Solution: Recursive (Another version of this question: find median of the array asked by GS)
   
   https://www.youtube.com/watch?v=XEmy13g1Qxc
   
@@ -22,8 +22,21 @@ we want kth largest, so we have to pop k elements from the heap. Each pop takes 
   we pick a pivot as a border and partition the array into two: less than the pivot number and greater
   
   
-  
-  
+def findKthLargest(self, nums, k):
+    k=len(nums)-k
+    # core of the algo
+    def quickSelect(l,r): 
+        pivot, p=nums[r], l # p index of left, pivot rightmost element
+        for i in range(l,r):
+            if nums[i]<=pivot: # those that are smaller, put them in the back
+                nums[p], nums[i]=nums[i], nums[p]
+                p+=1
+        nums[p], nums[r]=nums[r], nums[p] # the last swap to put pivot in the begining
+
+        if p>k:   return quickSelect(l, p-1)
+        elif p<k: return quickSelect(p+1, r)
+        else:     return nums[p]
+
   
 
 
