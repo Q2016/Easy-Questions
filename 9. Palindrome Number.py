@@ -69,3 +69,8 @@ public class Solution {
         return x == revertedNumber || x == revertedNumber/10;
     }
 }
+
+
+Complexity Analysis
+Time complexity : O(logN)
+Space complexity : O(1)
