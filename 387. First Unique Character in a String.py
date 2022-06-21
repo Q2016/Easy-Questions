@@ -32,4 +32,7 @@ to check if a character is unique or not. If the character is unique, one could 
         return -1
 
     
-Linear time solution: O(n)    
+Complexity Analysis
+
+Time complexity : O(N) since we go through the string of length N two times.
+Space complexity : O(1) because English alphabet contains 26 letters.
