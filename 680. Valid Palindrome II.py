@@ -11,7 +11,27 @@ Output: true
 
 
     
-Solution: Recursive
+Solution: Two Pointers
+  https://www.youtube.com/watch?v=JrxRYBwG6EI
+    
+Class Solution:
+  def validPalindrome(self, s):
+    l, r=0, len(s)-1
+    
+    while l<r:
+      if s[l] != s[r]:
+        skipL, skipR=s[l+1:r+1], s[l:r]
+        return (skipL==skipL[::-1] or skipR==skipR[::-1])
+      
+      l, r = l+1, r-1
+      
+      return True
+    
+  
+  
+  
+Approach 2: Recursive  
+  
 For figure: https://leetcode.com/problems/valid-palindrome-ii/discuss/1452155/Python-Visual-Explanation-Picture-is-worth-a-thousand-words    
 
 1- s is a palindrome - great, we can just return true.
