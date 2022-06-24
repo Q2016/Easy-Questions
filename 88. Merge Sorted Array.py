@@ -17,7 +17,7 @@ The result of the merge is [1,2,2,3,5,6] with the underlined elements coming fro
 
 
 
-Solution:  
+Solution: Three Pointers  
    https://www.youtube.com/watch?v=P1Ic85RarKY
    
 This is a very good question:
