@@ -16,7 +16,10 @@ Explanation: The two heater was placed in the position 1 and 4. We need to use r
     
     
     
-Solution: BST
+Solution: BST 
+    
+    
+    We use BST to find the mid distance between two heaters
 
     def findRadius(self, houses: List[int], heaters: List[int]) -> int:
         
@@ -30,5 +33,7 @@ Solution: BST
                 return binary_search_recursive(array, element, start, mid-1)
             else:
                 return binary_search_recursive(array, element, mid+1, end)
+        
+        
         for h in houses:
             binary_search_recursive(heaters, h, heaters[0], heaters[-1])
