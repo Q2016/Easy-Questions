@@ -20,7 +20,8 @@ Output: [3,2,1,0,1,0,0,1,2,2,1,0]
     
     
     
-Solution:Min Array
+Solution:Min Array (similar to 849. Maximize Distance to Closest Person)
+    
 For each index S[i], let's try to find the distance to the next character C going left, and going right. 
 The answer is the minimum of these two values.
 When going left to right, we'll remember the index prev of the last character C we've seen. Then the answer is i - prev.
