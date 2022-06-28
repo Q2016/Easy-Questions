@@ -24,7 +24,10 @@ class Solution:
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
    
-
+Time: O(N) - for DFS
+Space: O(N) - for the recursive stack
+    
+    
 
 Iterative
 from collections import deque
@@ -47,3 +50,6 @@ class Solution:
                 num_node_level = len(worklist)
                 
         return levels  
+    
+    
+
