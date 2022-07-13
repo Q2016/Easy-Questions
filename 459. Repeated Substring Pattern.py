@@ -33,6 +33,34 @@ def repeatedSubstringPattern(self, str):
 
         if not str:
             return False
+           
+           
+Related Question: Print all substrings of a given string: Two-Pointers
+
+'''
+* Function to print all (n * (n + 1)) / 2
+* substrings of a given string s of length n.
+'''
+def printAllSubstrings(s, n):
+ 
+    # Fix start index in outer loop.
+    # Reveal new character in inner loop till end of string.
+    # Print till-now-formed string.
+    for i in range(n):
+        temp=""
+        for j in range(i,n):
+            temp+=s[j]
+            print(temp)
+ 
+# Driver program to test above function
+ 
+s = "Geeky"
+printAllSubstrings(s, len(s))
+
+Time complexity: O(n^2)
+Auxiliary Space: O(n)
+
+           
             
         ss = (str + str)[1:-1]
         return ss.find(str) != -1
